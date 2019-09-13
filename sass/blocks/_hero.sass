@@ -1,5 +1,8 @@
 .hero 
   position: relative
+  &-slider 
+    &_mobile
+      display: none
   &-arrows
     position: absolute 
     top: 45%
@@ -22,11 +25,12 @@
     letter-spacing: 4px
     margin-bottom: 10px
   &__subtitle 
+    margin-bottom: 45px
     font-size: 16px
     letter-spacing: 1.4px
     +thin
-    margin-bottom: 45px
   &__button
+    margin-right: 25px
     padding: 10px 20px
     border: 1px solid rgba(255, 255, 255, 0.5)
     background-color: transparent
@@ -35,11 +39,11 @@
     font-size: 12px
     line-height: 15px
     letter-spacing: 1px
-    margin-right: 25px
     +thin
     &:hover 
       background-color: #CC1E2C
       transition: 0.3s  
+
 
 @media (max-width: 1300px)
   .hero
@@ -49,5 +53,56 @@
     &__title 
       font-size: 70px
       line-height: 1
+
+@media (max-width: 1000px)
+  .hero 
+    &-arrows 
+      top: 35%
+    &-content 
+      max-width: 50%
+    &__subtitle 
+      max-width: 300px
+      line-height: 1.4
+      margin-bottom: 0
+    &__button 
+      display: none
+
+@media (max-width: 890px)
+  .hero 
+    &__title 
+      font-size: 56px
+
+@media (max-width: 768px)
+  .hero 
+    &-slider 
+      &__item
+        min-height: 300px
+        img
+          display:none !important
+    &-arrows
+      display: none
+    &-content 
+      top: 25%
+      right: 0
+      left: 0
+      margin: auto
+      padding: 14px
+      text-align: center
+      background-color: rgba(0, 0, 0, 0.5)
+    &__title 
+      font-size: 30px
+      margin-bottom: 13px
+    &__subtitle 
+      font-size: 14px
+      line-height: 20px
+      margin: auto
+
+@media (max-width: 320px)
+  .hero
+    &-slider 
+      &_dekstop
+        display: none
+      &_mobile
+        display: block
   
 

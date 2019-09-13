@@ -78,3 +78,19 @@
     opacity: 1;
     background-color: #CC1E2C;
 }
+
+@media (max-width: 768px) {
+    .slick-dots li {
+        width: 50px;
+        height: 3px;
+        margin: 0 3px;
+    }
+    .slick-dots li button {
+        width: 50px;
+        height: 3px;
+    }
+    .slick-dots li button:before {
+        width: 50px;
+        height: 3px;
+    }
+  }

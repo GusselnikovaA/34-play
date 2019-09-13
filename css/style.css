@@ -403,9 +403,20 @@ a {
   border: 0px solid;
 }
 
+.arrows {
+  outline: none;
+  cursor: pointer;
+}
+
 @media (max-width: 1300px) {
   .container {
     max-width: 90%;
+  }
+}
+
+@media (max-width: 568px) {
+  .container {
+    max-width: 100%;
   }
 }
 
@@ -452,6 +463,12 @@ a {
   right: 0;
   width: 18px;
   cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .sale {
+    display: none;
+  }
 }
 
 .header-menu {
@@ -733,14 +750,28 @@ a {
   }
   .bottom__cart {
     max-width: 25px;
+    margin-right: 0;
   }
   .bottom__cart:after {
     display: none;
   }
 }
 
+@media (max-width: 568px) {
+  .bottom-wrap {
+    padding: 15px;
+  }
+  .bottom-search {
+    display: none;
+  }
+}
+
 .hero {
   position: relative;
+}
+
+.hero-slider_mobile {
+  display: none;
 }
 
 .hero-arrows {
@@ -775,13 +806,14 @@ a {
 }
 
 .hero__subtitle {
+  margin-bottom: 45px;
   font-size: 16px;
   letter-spacing: 1.4px;
   font-family: 'Proxima Nova Thin', sans-serif;
-  margin-bottom: 45px;
 }
 
 .hero__button {
+  margin-right: 25px;
   padding: 10px 20px;
   border: 1px solid rgba(255, 255, 255, 0.5);
   background-color: transparent;
@@ -790,7 +822,6 @@ a {
   font-size: 12px;
   line-height: 15px;
   letter-spacing: 1px;
-  margin-right: 25px;
   font-family: 'Proxima Nova Thin', sans-serif;
 }
 
@@ -808,6 +839,68 @@ a {
   .hero__title {
     font-size: 70px;
     line-height: 1;
+  }
+}
+
+@media (max-width: 1000px) {
+  .hero-arrows {
+    top: 35%;
+  }
+  .hero-content {
+    max-width: 50%;
+  }
+  .hero__subtitle {
+    max-width: 300px;
+    line-height: 1.4;
+    margin-bottom: 0;
+  }
+  .hero__button {
+    display: none;
+  }
+}
+
+@media (max-width: 890px) {
+  .hero__title {
+    font-size: 56px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-slider__item {
+    min-height: 300px;
+  }
+  .hero-slider__item img {
+    display: none !important;
+  }
+  .hero-arrows {
+    display: none;
+  }
+  .hero-content {
+    top: 25%;
+    right: 0;
+    left: 0;
+    margin: auto;
+    padding: 14px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .hero__title {
+    font-size: 30px;
+    margin-bottom: 13px;
+  }
+  .hero__subtitle {
+    font-size: 14px;
+    line-height: 20px;
+    margin: auto;
+  }
+}
+
+@media (max-width: 320px) {
+  .hero-slider_dekstop {
+    display: none;
+  }
+  .hero-slider_mobile {
+    display: block;
   }
 }
 /*# sourceMappingURL=style.css.map */

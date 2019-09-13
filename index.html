@@ -131,9 +131,9 @@
           </div>
           <!-- /.bottom-search -->
           <div class="bottom__user">
-              <a href="#"><img src="img/header/Vector (Stroke).svg" alt="иконка корзины"></a>
-            </div>
-            <!-- /.bottom-user -->
+            <a href="#"><img src="img/header/Vector (Stroke).svg" alt="иконка корзины"></a>
+          </div>
+          <!-- /.bottom-user -->
           <div class="bottom__cart">
             <a href="#"><img src="img/header/Icon_Cart.svg" alt="иконка корзины"></a>
           </div>
@@ -149,28 +149,48 @@
   <!-- /.header -->
 
   <main>
+    <!-- ОСНОВНОЙ ВИЗУАЛЬНЫЙ БЛОК HERO -->
     <section class="hero">
-      <div class="hero-slider">
-        <div class="hero-slider_item">
+      <!-- Слайдер декстопной версии -->
+      <div class="hero-slider hero-slider_dekstop">
+        <div class="hero-slider__item">
           <img src="img/hero/IMG_Hero.jpg" alt="Фоновая картинка мужчины">
         </div>
-        <div class="hero-slider_item">
+        <div class="hero-slider__item">
           <img src="img/hero/IMG_Hero.jpg" alt="Фоновая картинка мужчины">
         </div>
-        <div class="hero-slider_item">
+        <div class="hero-slider__item">
           <img src="img/hero/IMG_Hero.jpg" alt="Фоновая картинка мужчины">
         </div>
-        <div class="hero-slider_item">
+        <div class="hero-slider__item">
           <img src="img/hero/IMG_Hero.jpg" alt="Фоновая картинка мужчины">
         </div>
       </div>
       <!-- /.hero-slider -->
+
+      <!-- Слайдер мобильной версии -->
+      <div class="hero-slider hero-slider_mobile">
+        <div class="hero-slider__item">
+          <img src="img/hero/banner_main.jpg" alt="Слайдер девушка">
+        </div>
+        <div class="hero-slider__item">
+          <img src="img/hero/banner_main.jpg" alt="Слайдер девушка">
+        </div>
+        <div class="hero-slider__item">
+          <img src="img/hero/banner_main.jpg" alt="Слайдер девушка">
+        </div>
+        <div class="hero-slider__item">
+          <img src="img/hero/banner_main.jpg" alt="Слайдер девушка">
+        </div>
+      </div>
+      <!-- /.hero-slider -->
+
       <!-- СТРЕЛКИ СЛАЙДЕРА -->
       <div class="hero-arrows">
-        <div class="hero-arrows__left">
+        <div class="arrows hero-arrows__left">
           <img src="img/hero/prev.svg" alt="стрелка влево">
         </div>
-        <div class="hero-arrows__right">
+        <div class="arrows hero-arrows__right">
           <img src="img/hero/next.svg" alt="стрелка вправо">
         </div>
       </div>
@@ -204,6 +224,7 @@
     // Скрипт слайдера
     $(document).ready(function () {
       $('.hero-slider').slick({
+        accessibility: true,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
@@ -213,6 +234,19 @@
         prevArrow: $('.hero-arrows__left'),
         nextArrow: $('.hero-arrows__right'),
         dots: true,
+        responsive: [{
+          breakpoint: 768,
+          settings: {
+            arrows: false,
+            swipe: true
+          }
+        }]
+      });
+      $('.hero-slider__item img').each(function () {
+        $(this).parent().css({
+          'background': 'url("img/hero/IMG_Hero.jpg") no-repeat center center',
+          'background-size': 'cover'
+        });
       });
     });
   </script>
