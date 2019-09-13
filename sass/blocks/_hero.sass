@@ -1,0 +1,53 @@
+.hero 
+  position: relative
+  &-arrows
+    position: absolute 
+    top: 45%
+    right: 13px 
+    left: 13px 
+    display: flex
+    justify-content: space-between
+    background-color: transparent
+  &-content 
+    position: absolute
+    top: 30%
+    left: 17%
+    max-width: 514px 
+    color: #FFFFFF
+    text-transform: uppercase
+  &__title 
+    font-family: 'Bebas Neue Regular'
+    font-size: 83px
+    line-height: 82px
+    letter-spacing: 4px
+    margin-bottom: 10px
+  &__subtitle 
+    font-size: 16px
+    letter-spacing: 1.4px
+    +thin
+    margin-bottom: 45px
+  &__button
+    padding: 10px 20px
+    border: 1px solid rgba(255, 255, 255, 0.5)
+    background-color: transparent
+    color: #ffffff
+    text-transform: uppercase
+    font-size: 12px
+    line-height: 15px
+    letter-spacing: 1px
+    margin-right: 25px
+    +thin
+    &:hover 
+      background-color: #CC1E2C
+      transition: 0.3s  
+
+@media (max-width: 1300px)
+  .hero
+    &-content 
+      top: 20%
+      left: 10%
+    &__title 
+      font-size: 70px
+      line-height: 1
+  
+

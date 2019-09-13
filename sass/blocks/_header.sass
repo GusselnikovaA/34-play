@@ -1,35 +1,36 @@
 .header 
+  &-menu 
+    display: none
+    margin-right: 16px
   &-top
     background: #4F4F4F
     color: #B0B0B0
-  &-info 
-    display: flex
-  &-location 
-    display: flex
-    align-items: center
-    margin-right: 42px
-  &__address 
-    margin-left: 8px
-  &__login, &__registration 
-    text-decoration: none
-    text-transform: uppercase
-    color: #B0B0B0
-    cursor: pointer
-  &__registration
-    margin-left: 21px
   &-bottom 
     background-color: #171717
     color: #ffffff
-
 
 .top
   &-wrap 
     display: flex
     justify-content: space-between
     align-items: center
-    padding: 11px 0
+    padding-top: 11px 
+    padding-bottom: 11px
     font-size: 14px
     line-height: 17px
+  &-info 
+    display: flex
+  &__location 
+    display: flex
+    align-items: center
+    margin-right: 42px
+  &__address 
+    margin-left: 8px
+  &__login, &__registration 
+    text-transform: uppercase
+    color: #B0B0B0
+  &__registration
+    margin-left: 21px
   &-list
     display: flex
     list-style: none
@@ -39,30 +40,139 @@
       margin-right: 30px
       cursor: pointer
       a 
-        text-decoration: none
         color: #B0B0B0
-        cursor: pointer
 
 .bottom 
   &-wrap 
     display: flex
     justify-content: space-between
     align-items: center
-    padding: 27px 0
     font-size: 14px
     line-height: 17px
+    padding-top: 8px
+  &-main 
+    display: flex
+    justify-content: flex-start
+    align-items: center
+  &__logo 
+    margin-right: 52px
   &-list
     display: flex
     list-style: none
     padding: 0
     margin: 0
     &__item 
-      margin-right: 30px
+      margin-right: 45px
       cursor: pointer
+      padding: 24px 0
+      position: relative
+      &:hover
+        &:after
+          content: ''
+          position: absolute
+          bottom: 0
+          z-index: 1
+          display: block
+          width: 100%
+          height: 4px
+          background-color: #CC1E2C
+          transition: 0.2s  
       a 
-        text-decoration: none
+        padding: 24px 0
         text-transform: uppercase
+        letter-spacing: 1.2px
         color: #ffffff
-        cursor: pointer
+        +thin
+  &-info 
+    display: flex
+    align-items: center
+  &-contacts 
+    display: flex
+    flex-direction: column
+    &__schedule 
+      padding-left: 5px
+      padding-bottom: 3px
+      color: #AFAFAF
+      +thin
+    &__phone
+      color: #ffffff
+      font-size: 22px
+      line-height: 27px
+      &--thin
+        +thin
+        color: #AFAFAF
+  &-search
+    width: 231px
+    display: flex
+    justify-content: flex-end
+    position: relative
+    &:after 
+      content: ''
+      position: absolute
+      bottom: -6px
+      z-index: 1
+      display: block
+      width: 100%
+      height: 2px
+      background-color: #505050
+      transition: 0.2s 
+    &__input
+      width: 100%
+      color: #ffffff
+  &__search 
+    margin-left: 34px
+  &__user 
+    display: none
+  &__cart
+    margin-right: 12px
+    margin-left: 26px
+    position: relative
+    &:after 
+      content: '5'
+      position: absolute
+      display: flex
+      justify-content: center
+      align-items: center
+      top: -5px
+      right: -10px
+      width: 19px 
+      height: 19px
+      border-radius: 50%
+      font-size: 10px
+      line-height: 12px
+      background-color: #CC1E2C
+  
+
+@media (max-width: 1300px)
+  .bottom 
+    &__logo 
+      margin-right: 30px
+    &-list
+      &__item 
+        margin-right: 20px
+    &-search
+      width: 130px
+
+@media (max-width: 1100px)
+  .header
+    &-menu 
+      display: block
+  .top 
+    display: none
+
+  .bottom 
+    &-wrap 
+      padding: 24px
+    &-list, &-contacts
+      display: none
+    &__user 
+      margin-left: 32px
+      display: block
+    &__cart
+      max-width: 25px
+      &:after 
+        display: none
+    
+
 
 

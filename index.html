@@ -8,15 +8,19 @@
 
   <title>Интернет-магазин уличной одежды 34Play</title>
 
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/slick-theme.css">
+  <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <!-- ПРЕДЛОЖЕНИЕ СО СКИДКАМИ -->
-  <div class="sale">
+  <div class="sale sale_active">
     <div class="container">
       <div class="sale-wrap">
-        <div class="sale__text">Да здравствует потреблядство! с 23 по 26 ноября скидки до <span>50%</span> в честь
+        <div class="sale__text">Да здравствует потреблядство! с 23 по 26 ноября скидки до <span
+            class="sale__text--bold">50%</span> в честь
           «черной пятницы»</div>
         <div class="sale__close">
           <img id="close" src="img/sale/Icon_Close.svg" alt="крестик закрытия">
@@ -28,6 +32,7 @@
   </div>
   <!-- /.sale -->
 
+  <!-- ШАПКА -->
   <header class="header">
     <!-- ВЕРХНЯЯ СЕКЦИЯ ШАПКИ -->
     <div class="header-top top">
@@ -53,19 +58,19 @@
           <!-- /.top-list -->
         </nav>
         <!-- /.top-nav -->
-        <div class="header-info">
-          <div class="header-location">
-            <img src="img/header/Union.svg" alt="иконка геолокации">
-            <span class="header__address">Санкт-Петербург</span>
+        <div class="top-info">
+          <div class="top__location">
+            <img src="img/header/Location.svg" alt="иконка геолокации">
+            <span class="top__address">Санкт-Петербург</span>
           </div>
-          <!-- /.header-location -->
-          <div class="header-login">
-            <a href="#" class="header__login">ВХОД</a>
-            <a href="#" class="header__registration">РЕГИСТРАЦИЯ</a>
+          <!-- /.top-location -->
+          <div class="top-login">
+            <a href="#" class="top__login">ВХОД</a>
+            <a href="#" class="top__registration">РЕГИСТРАЦИЯ</a>
           </div>
-          <!-- /.header-login -->
+          <!-- /.top-login -->
         </div>
-        <!-- /.header-info -->
+        <!-- /.top-info -->
       </div>
       <!-- /.container -->
     </div>
@@ -74,40 +79,143 @@
     <!-- НИЖНЯЯ СЕКЦИЯ ШАПКИ -->
     <div class="header-bottom bottom">
       <div class="container bottom-wrap">
-        <div class="header-logo">
-          <img src="img/Group.svg" alt="Логотип компании">
+
+        <div class="bottom-main">
+          <div class="header-menu">
+            <a href="tel:+7(495)42-251-31" class="bottom-contacts__phone">
+              <img src="img/header/Union.svg" alt="Бургер меню">
+            </a>
+          </div>
+          <!-- /.header-menu -->
+          <div class="bottom__logo">
+            <img src="img/Group.svg" alt="Логотип компании">
+          </div>
+          <!-- /.bottom__logo -->
+          <nav class="bottom-nav">
+            <ul class="bottom-list">
+              <li class="bottom-list__item">
+                <a href="#">мужское</a>
+              </li>
+              <li class="bottom-list__item">
+                <a href="#">женское</a>
+              </li>
+              <li class="bottom-list__item">
+                <a href="#">sale</a>
+              </li>
+              <li class="bottom-list__item">
+                <a href="#">о нас</a>
+              </li>
+              <li class="bottom-list__item">
+                <a href="#">контакты</a>
+              </li>
+            </ul>
+            <!-- /.bottom-list -->
+          </nav>
+          <!-- /.bottom-nav -->
         </div>
-        <!-- /.header-logo -->
-        <nav class="bottom-nav">
-          <ul class="bottom-list">
-            <li class="bottom-list__item">
-              <a href="#">мужское</a>
-            </li>
-            <li class="bottom-list__item">
-              <a href="#">женское</a>
-            </li>
-            <li class="bottom-list__item">
-              <a href="#">sale</a>
-            </li>
-            <li class="bottom-list__item">
-              <a href="#">о нас</a>
-            </li>
-            <li class="bottom-list__item">
-              <a href="#">контакты</a>
-            </li>
-          </ul>
-          <!-- /.bottom-list -->
-        </nav>
-        <!-- /.bottom-nav -->
+        <!-- /.bottom-main -->
+        <div class="bottom-info">
+          <div class="bottom-contacts">
+            <span class="bottom-contacts__schedule">пн-пт, 11:00–18:00</span>
+            <a href="tel:+7(495)42-251-31" class="bottom-contacts__phone">
+              <span class="bottom-contacts__phone--thin">+7 (800)</span>
+              500-17-39
+            </a>
+          </div>
+          <!-- /.bottom-contacts -->
+          <div class="bottom-search bottom__search">
+            <input class="input bottom-search__input" type="text" name="query">
+            <a href="#">
+              <img src="img/header/Icon_Search.svg" alt="иконка поиска">
+            </a>
+          </div>
+          <!-- /.bottom-search -->
+          <div class="bottom__user">
+              <a href="#"><img src="img/header/Vector (Stroke).svg" alt="иконка корзины"></a>
+            </div>
+            <!-- /.bottom-user -->
+          <div class="bottom__cart">
+            <a href="#"><img src="img/header/Icon_Cart.svg" alt="иконка корзины"></a>
+          </div>
+          <!-- /.bottom-cart -->
+        </div>
+        <!-- /.bottom-info -->
       </div>
       <!-- /.container bottom-wrap -->
     </div>
     <!-- /.header-bottom -->
+    </div>
   </header>
   <!-- /.header -->
 
+  <main>
+    <section class="hero">
+      <div class="hero-slider">
+        <div class="hero-slider_item">
+          <img src="img/hero/IMG_Hero.jpg" alt="Фоновая картинка мужчины">
+        </div>
+        <div class="hero-slider_item">
+          <img src="img/hero/IMG_Hero.jpg" alt="Фоновая картинка мужчины">
+        </div>
+        <div class="hero-slider_item">
+          <img src="img/hero/IMG_Hero.jpg" alt="Фоновая картинка мужчины">
+        </div>
+        <div class="hero-slider_item">
+          <img src="img/hero/IMG_Hero.jpg" alt="Фоновая картинка мужчины">
+        </div>
+      </div>
+      <!-- /.hero-slider -->
+      <!-- СТРЕЛКИ СЛАЙДЕРА -->
+      <div class="hero-arrows">
+        <div class="hero-arrows__left">
+          <img src="img/hero/prev.svg" alt="стрелка влево">
+        </div>
+        <div class="hero-arrows__right">
+          <img src="img/hero/next.svg" alt="стрелка вправо">
+        </div>
+      </div>
+      <!-- /.hero-arrows -->
+
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero__title">TRAILHEAD WEAR INDASTREE</div>
+          <div class="hero__subtitle">с гордостью разработано и произведено в России</div>
+          <button class="button hero__button">Мужская одежда</button>
+          <button class="button hero__button">женская одежда</button>
+        </div>
+        <!-- /.hero-content -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /.hero -->
+  </main>
 
 
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="js/sale.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script>
+    // Инициализация WOW.js
+    new WOW().init();
+
+    // Скрипт слайдера
+    $(document).ready(function () {
+      $('.hero-slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        infinite: true,
+        speed: 2000,
+        prevArrow: $('.hero-arrows__left'),
+        nextArrow: $('.hero-arrows__right'),
+        dots: true,
+      });
+    });
+  </script>
 </body>
 
 </html>

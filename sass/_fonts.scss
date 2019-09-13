@@ -1,9 +1,47 @@
 @font-face {
-font-family: 'Proxima Nova Light';
-src: url('../fonts/ProximaNova-Light.eot');
-src: url('../fonts/ProximaNova-Light.eot?#iefix') format('embedded-opentype'),
-url('../fonts/ProximaNova-Light.woff') format('woff'),
-url('../fonts/ProximaNova-Light.ttf') format('truetype');
-font-weight: normal;
-font-style: normal;
+  font-family: 'Proxima Nova Light';
+  src: url('../fonts/ProximaNova/ProximaNova-Light.eot');
+  src: url('../fonts/ProximaNova/ProximaNova-Light.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/ProximaNova/ProximaNova-Light.woff') format('woff'),
+  url('../fonts/ProximaNova/ProximaNova-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
+
+@font-face {
+  font-family: 'Proxima Nova Thin';
+  src: url('../fonts/ProximaNova/ProximaNovaT-Thin.eot');
+  src: url('../fonts/ProximaNova/ProximaNovaT-Thin.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/ProximaNova/ProximaNovaT-Thin.woff') format('woff'),
+  url('../fonts/ProximaNova/ProximaNovaT-Thin.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova Bold';
+  src: url('../fonts/ProximaNova/ProximaNova-Bold.eot');
+  src: url('../fonts/ProximaNova/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/ProximaNova/ProximaNova-Bold.woff') format('woff'),
+  url('../fonts/ProximaNova/ProximaNova-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  }
+
+@mixin thin {
+  font-family: 'Proxima Nova Thin', sans-serif; 
+}
+
+@mixin bold {
+  font-family: 'Proxima Nova Bold', sans-serif;
+}
+
+@font-face {
+  font-family: 'Bebas Neue Regular';
+  src: url('../fonts/BebasNeue/BebasNeueRegular.eot');
+  src: url('../fonts/BebasNeue/BebasNeueRegular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/BebasNeue/BebasNeueRegular.woff') format('woff'),
+  url('../fonts/BebasNeue/BebasNeueRegular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  }
