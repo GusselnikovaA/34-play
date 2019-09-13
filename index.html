@@ -15,6 +15,7 @@
 </head>
 
 <body>
+
   <!-- ПРЕДЛОЖЕНИЕ СО СКИДКАМИ -->
   <div class="sale sale_active">
     <div class="container">
@@ -75,11 +76,9 @@
       <!-- /.container -->
     </div>
     <!-- /.header-top -->
-
     <!-- НИЖНЯЯ СЕКЦИЯ ШАПКИ -->
     <div class="header-bottom bottom">
       <div class="container bottom-wrap">
-
         <div class="bottom-main">
           <div class="header-menu">
             <a href="tel:+7(495)42-251-31" class="bottom-contacts__phone">
@@ -149,9 +148,10 @@
   <!-- /.header -->
 
   <main>
+
     <!-- ОСНОВНОЙ ВИЗУАЛЬНЫЙ БЛОК HERO -->
     <section class="hero">
-      <!-- Слайдер декстопной версии -->
+      <!-- СЛАЙДЕР ДЕКСТОПНОЙ ВЕРСИИ -->
       <div class="hero-slider hero-slider_dekstop">
         <div class="hero-slider__item">
           <img src="img/hero/IMG_Hero.jpg" alt="Фоновая картинка мужчины">
@@ -168,7 +168,7 @@
       </div>
       <!-- /.hero-slider -->
 
-      <!-- Слайдер мобильной версии -->
+      <!-- ССЛАЙДЕР МОБИЛЬНОЙ ВЕРСИИ -->
       <div class="hero-slider hero-slider_mobile">
         <div class="hero-slider__item">
           <img src="img/hero/banner_main.jpg" alt="Слайдер девушка">
@@ -198,7 +198,7 @@
 
       <div class="container">
         <div class="hero-content">
-          <div class="hero__title">TRAILHEAD WEAR INDASTREE</div>
+          <div class="hero__title">TRAILHEAD WEAR INDASTREE</div>
           <div class="hero__subtitle">с гордостью разработано и произведено в России</div>
           <button class="button hero__button">Мужская одежда</button>
           <button class="button hero__button">женская одежда</button>
@@ -208,6 +208,59 @@
       <!-- /.container -->
     </section>
     <!-- /.hero -->
+
+    <!-- БЛОК СО СПИСКОМ ПРЕИМУЩЕСТВ МАГАЗИНА -->
+    <section class="edge">
+      <div class="container">
+        <div class="edge-wrap">
+          <div class="edge-cards edge-slider">
+            <div class="edge__card edge-slider__item">
+              <div class="edge__image">
+                <img src="img/edge/Icon_Delivery.svg" alt="иконка доставки">
+              </div>
+              <p class="edge__text">Курьерская доставка по всей России</p>
+            </div>
+            <!-- /.edge__card -->
+            <div class="edge__card edge-slider__item">
+              <div class="edge__image">
+                <img src="img/edge/Icon_Sizes.svg" alt="иконка одежда">
+              </div>
+              <p class="edge__text">Несколько размеров на выбор и бесплатная примерка</p>
+            </div>
+            <!-- /.edge__card -->
+            <div class="edge__card edge-slider__item">
+              <div class="edge__image">
+                <img src="img/edge/Icon_Payment.svg" alt="иконка оплаты">
+              </div>
+              <p class="edge__text">Удобные способы оплаты: наличные; электронные платежи</p>
+            </div>
+            <!-- /.edge__card -->
+            <div class="edge__card edge-slider__item">
+              <div class="edge__image">
+                <img src="img/edge/Icon_Product_Back.svg" alt="иконка возврата товара">
+              </div>
+              <p class="edge__text">Возврат товара в течение 14 дней</p>
+            </div>
+            <!-- /.edge__card -->
+          </div>
+          <!-- /.edge-cards -->
+          <!-- СТРЕЛКИ СЛАЙДЕРА -->
+          <div class="edge-arrows">
+            <div class="arrows edge-arrows__left">
+              <img src="img/edge/prev.svg" alt="стрелка влево">
+            </div>
+            <div class="arrows edge-arrows__right">
+              <img src="img/edge/next.svg" alt="стрелка вправо">
+            </div>
+          </div>
+          <!-- /.hero-arrows -->
+        </div>
+        <!-- /.edge wrap -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /.edge -->
+
   </main>
 
 
@@ -237,16 +290,23 @@
         responsive: [{
           breakpoint: 768,
           settings: {
-            arrows: false,
             swipe: true
           }
         }]
       });
-      $('.hero-slider__item img').each(function () {
-        $(this).parent().css({
-          'background': 'url("img/hero/IMG_Hero.jpg") no-repeat center center',
-          'background-size': 'cover'
-        });
+      $('.edge-slider').slick({
+        accessibility: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        speed: 2000,
+        prevArrow: $('.edge-arrows__left'),
+        nextArrow: $('.edge-arrows__right'),
+        responsive: [{
+          breakpoint: 768,
+          settings: {
+            swipe: true
+          }
+        }]
       });
     });
   </script>

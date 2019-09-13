@@ -74,11 +74,11 @@
 
 @media (max-width: 768px)
   .hero 
-    &-slider 
-      &__item
-        min-height: 300px
-        img
-          display:none !important
+    // &-slider 
+    //   &__item
+    //     min-height: 382px
+    //     img
+    //       display:none 
     &-arrows
       display: none
     &-content 
@@ -92,17 +92,26 @@
     &__title 
       font-size: 30px
       margin-bottom: 13px
+      letter-spacing: 0.5px
     &__subtitle 
       font-size: 14px
       line-height: 20px
       margin: auto
 
-@media (max-width: 320px)
+@media (max-width: 568px)
   .hero
     &-slider 
       &_dekstop
         display: none
       &_mobile
         display: block
+      &__item 
+        background-color: #171717
+        img 
+          margin: auto
+    &-content 
+      top: 38%
+      max-width: 85%
+
   
 
