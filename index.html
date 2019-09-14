@@ -176,7 +176,7 @@
         </div>
       </div>
       <!-- /.hero-arrows -->
-      <!-- ССЛАЙДЕР МОБИЛЬНОЙ ВЕРСИИ -->
+      <!-- СЛАЙДЕР МОБИЛЬНОЙ ВЕРСИИ -->
       <div class="hero-slider hero-slider_mobile">
         <div class="hero-slider__item">
           <img src="img/hero/banner_main.jpg" alt="Слайдер девушка">
@@ -289,74 +289,74 @@
 
 
     <!-- СЕКЦИЯ СЛАЙДЕР С БРЕНДАМИ -->
-    <section class="brands">
+    <section class="brand">
       <div class="container">
-        <div class="brands-wrap">
-            <div class="brands-slider">
-                <div class="brands-slider__item">
-                  <div class="brands__image">
-                      <img src="img/brands/Layer 57.png" alt="">
-                  </div>
-                </div>
-                <div class="brands-slider__item">
-                    <div class="brands__image">
-                        <img src="img/brands/Vector Smart Object.png" alt="">
-                    </div>
-                </div>
-                <div class="brands-slider__item">
-                    <div class="brands__image">
-                        <img src="img/brands/Vector Smart Object-2.png" alt="">
-                    </div>
-                </div>
-                <div class="brands-slider__item">
-                    <div class="brands__image">
-                        <img src="img/brands/Vector Smart Object-1.png" alt="">
-                    </div>
-                </div>
-                <div class="brands-slider__item">
-                    <div class="brands__image">
-                        <img src="img/brands/Layer 35.png" alt="">
-                    </div>
-                </div>
-                <div class="brands-slider__item">
-                    <div class="brands__image">
-                        <img src="img/brands/Layer 36.png" alt="">
-                    </div>
-                </div>
-                <div class="brands-slider__item">
-                    <div class="brands__image">
-                        <img src="img/brands/Layer 57.png" alt="">
-                    </div>
-                </div>
-                <div class="brands-slider__item">
-                    <div class="brands__image">
-                        <img src="img/brands/Vector Smart Object.png" alt="">
-                    </div>
-                </div>
-                <div class="brands-slider__item">
-                    <div class="brands__image">
-                        <img src="img/brands/Vector Smart Object-2.png" alt="">
-                    </div>
-                </div>
-      
-              </div>
-              <!-- /.brands-slider -->
-              <!-- СТРЕЛКИ СЛАЙДЕРА -->
-          <div class="brands-arrows">
-              <div class="arrows brands-arrows__left">
-                <img src="img/brands/prev.png" alt="стрелка влево">
-              </div>
-              <div class="arrows brands-arrows__right">
-                <img src="img/brands/next.png" alt="стрелка вправо">
+        <div class="brand-wrap">
+          <div class="brand-slider">
+            <div class="brand-slider__item">
+              <div class="brand__image">
+                <img src="img/brand/Layer 57.png" alt="">
               </div>
             </div>
-            <!-- /.brands-arrows -->
+            <div class="brand-slider__item">
+              <div class="brand__image">
+                <img src="img/brand/Vector Smart Object.png" alt="">
+              </div>
+            </div>
+            <div class="brand-slider__item">
+              <div class="brand__image">
+                <img src="img/brand/Vector Smart Object-2.png" alt="">
+              </div>
+            </div>
+            <div class="brand-slider__item">
+              <div class="brand__image">
+                <img src="img/brand/Vector Smart Object-1.png" alt="">
+              </div>
+            </div>
+            <div class="brand-slider__item">
+              <div class="brand__image">
+                <img src="img/brand/Layer 35.png" alt="">
+              </div>
+            </div>
+            <div class="brand-slider__item">
+              <div class="brand__image">
+                <img src="img/brand/Layer 36.png" alt="">
+              </div>
+            </div>
+            <div class="brand-slider__item">
+              <div class="brand__image">
+                <img src="img/brand/Layer 57.png" alt="">
+              </div>
+            </div>
+            <div class="brand-slider__item">
+              <div class="brand__image">
+                <img src="img/brand/Vector Smart Object.png" alt="">
+              </div>
+            </div>
+            <div class="brand-slider__item">
+              <div class="brand__image">
+                <img src="img/brand/Vector Smart Object-2.png" alt="">
+              </div>
+            </div>
+
+          </div>
+          <!-- /.brand-slider -->
+          <!-- СТРЕЛКИ СЛАЙДЕРА -->
+          <div class="brand-arrows">
+            <div class="arrows brand-arrows__left">
+              <img src="img/brand/prev.png" alt="стрелка влево">
+            </div>
+            <div class="arrows brand-arrows__right">
+              <img src="img/brand/next.png" alt="стрелка вправо">
+            </div>
+          </div>
+          <!-- /.brand-arrows -->
         </div>
-        <!-- /.brands-wrap -->
+        <!-- /.brand-wrap -->
       </div>
       <!-- /.container -->
     </section>
-    <!-- /.brands -->
+    <!-- /.brand -->
 
   </main>
 
@@ -407,14 +407,13 @@
           }
         }]
       });
-    });
-    // СЛАЙДЕР В БЛОКЕ BRAND
-    $('.brands-slider').slick({
+      // СЛАЙДЕР В БЛОКЕ BRAND
+      $('.brand-slider').slick({
         slidesToShow: 6,
         slidesToScroll: 1,
         speed: 2000,
-        // prevArrow: $('.edge-arrows__left'),
-        // nextArrow: $('.edge-arrows__right'),
+        prevArrow: $('.brand-arrows__left'),
+        nextArrow: $('.brand-arrows__right'),
         // responsive: [{
         //   breakpoint: 768,
         //   settings: {
@@ -422,6 +421,7 @@
         //   }
         // }]
       });
+    });
   </script>
 </body>
 

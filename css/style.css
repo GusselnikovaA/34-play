@@ -1001,16 +1001,35 @@ a {
   max-width: 302px;
 }
 
-.brands-wrap {
+.brand-wrap {
+  padding: 30px 0;
+  padding-bottom: 50px;
+  position: relative;
+  max-width: 1300px;
+}
+
+.brand-slider {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: auto;
 }
 
-.brands__image {
+.brand-slider__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.brand__image {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1022,5 +1041,20 @@ a {
           align-items: center;
   width: 151px;
   height: 61px;
+}
+
+.brand-arrows {
+  position: absolute;
+  top: 40px;
+  right: -23px;
+  left: -23px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 1000;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: transparent;
 }
 /*# sourceMappingURL=style.css.map */
