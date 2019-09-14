@@ -10,7 +10,7 @@ a
   cursor: pointer
 
 .container 
-  max-width: 1285px
+  max-width: 1350px
   margin: auto
 
 .button 
@@ -26,9 +26,6 @@ a
   outline: none 
   cursor: pointer
 
-
-
-
 @media (max-width: 1300px)
   .container 
     max-width: 90%
@@ -36,4 +33,30 @@ a
 @media (max-width: 568px)
   .container 
     max-width: 100%
+
+// HOVER ЭФФЕКТЫ 
+@media (min-width: 992px)
+  // HOVER эффекты блока HEADER 
+  .bottom 
+    &-list
+      &__item 
+        &:hover
+          &:after
+            content: ''
+            position: absolute
+            bottom: 0
+            z-index: 1
+            display: block
+            width: 100%
+            height: 4px
+            background-color: #CC1E2C
+            transition: 0.5s
+            // transform: translateX(-50%)
+            // transition: width .3s ease-in-out
+  // HOVER эффекты блока HERO
+  .hero 
+    &__button
+      &:hover 
+        background-color: #CC1E2C
+        transition: 0.5s 
   

@@ -148,7 +148,6 @@
   <!-- /.header -->
 
   <main>
-
     <!-- ОСНОВНОЙ ВИЗУАЛЬНЫЙ БЛОК HERO -->
     <section class="hero">
       <!-- СЛАЙДЕР ДЕКСТОПНОЙ ВЕРСИИ -->
@@ -166,8 +165,17 @@
           <img src="img/hero/IMG_Hero.jpg" alt="Фоновая картинка мужчины">
         </div>
       </div>
-      <!-- /.hero-slider -->
-
+      <!-- /.hero-slider_dekstop -->
+      <!-- СТРЕЛКИ СЛАЙДЕРА -->
+      <div class="hero-arrows">
+        <div class="arrows hero-arrows__left">
+          <img src="img/hero/prev.svg" alt="стрелка влево">
+        </div>
+        <div class="arrows hero-arrows__right">
+          <img src="img/hero/next.svg" alt="стрелка вправо">
+        </div>
+      </div>
+      <!-- /.hero-arrows -->
       <!-- ССЛАЙДЕР МОБИЛЬНОЙ ВЕРСИИ -->
       <div class="hero-slider hero-slider_mobile">
         <div class="hero-slider__item">
@@ -183,19 +191,8 @@
           <img src="img/hero/banner_main.jpg" alt="Слайдер девушка">
         </div>
       </div>
-      <!-- /.hero-slider -->
-
-      <!-- СТРЕЛКИ СЛАЙДЕРА -->
-      <div class="hero-arrows">
-        <div class="arrows hero-arrows__left">
-          <img src="img/hero/prev.svg" alt="стрелка влево">
-        </div>
-        <div class="arrows hero-arrows__right">
-          <img src="img/hero/next.svg" alt="стрелка вправо">
-        </div>
-      </div>
-      <!-- /.hero-arrows -->
-
+      <!-- /.hero-slider_mobile -->
+      <!-- КОНТЕНТ HERO  -->
       <div class="container">
         <div class="hero-content">
           <div class="hero__title">TRAILHEAD WEAR INDASTREE</div>
@@ -261,6 +258,106 @@
     </section>
     <!-- /.edge -->
 
+    <!-- СЕКЦИЯ С ПРЕДЛОЖЕНИЯМИ -->
+    <section class="offer">
+      <div class="container">
+        <div class="grid" data-masonry='{ "grid": ".grid_item", "columnWidth": 160, "gutter": 10}'>
+          <div class="grid_item grid_item--height2 grid_item--width3">
+            <img src="img/offer/img-1.png" alt="">
+          </div>
+          <div class="grid_item grid_item--width2">
+            <img src="img/offer/img-2.png" alt="">
+          </div>
+          <div class="grid_item grid_item--width3">
+            <img src="img/offer/img-3.png" alt="">
+          </div>
+          <div class="grid_item grid_item--width2">
+            <img src="img/offer/img-4.png" alt="">
+          </div>
+          <div class="grid_item grid_item--width3">
+            <img src="img/offer/img-5.png" alt="">
+          </div>
+          <div class="grid_item">
+            <img src="img/offer/img-6.png" alt="">
+          </div>
+        </div>
+        <!-- /.grid -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /.offer -->
+
+
+    <!-- СЕКЦИЯ СЛАЙДЕР С БРЕНДАМИ -->
+    <section class="brands">
+      <div class="container">
+        <div class="brands-wrap">
+            <div class="brands-slider">
+                <div class="brands-slider__item">
+                  <div class="brands__image">
+                      <img src="img/brands/Layer 57.png" alt="">
+                  </div>
+                </div>
+                <div class="brands-slider__item">
+                    <div class="brands__image">
+                        <img src="img/brands/Vector Smart Object.png" alt="">
+                    </div>
+                </div>
+                <div class="brands-slider__item">
+                    <div class="brands__image">
+                        <img src="img/brands/Vector Smart Object-2.png" alt="">
+                    </div>
+                </div>
+                <div class="brands-slider__item">
+                    <div class="brands__image">
+                        <img src="img/brands/Vector Smart Object-1.png" alt="">
+                    </div>
+                </div>
+                <div class="brands-slider__item">
+                    <div class="brands__image">
+                        <img src="img/brands/Layer 35.png" alt="">
+                    </div>
+                </div>
+                <div class="brands-slider__item">
+                    <div class="brands__image">
+                        <img src="img/brands/Layer 36.png" alt="">
+                    </div>
+                </div>
+                <div class="brands-slider__item">
+                    <div class="brands__image">
+                        <img src="img/brands/Layer 57.png" alt="">
+                    </div>
+                </div>
+                <div class="brands-slider__item">
+                    <div class="brands__image">
+                        <img src="img/brands/Vector Smart Object.png" alt="">
+                    </div>
+                </div>
+                <div class="brands-slider__item">
+                    <div class="brands__image">
+                        <img src="img/brands/Vector Smart Object-2.png" alt="">
+                    </div>
+                </div>
+      
+              </div>
+              <!-- /.brands-slider -->
+              <!-- СТРЕЛКИ СЛАЙДЕРА -->
+          <div class="brands-arrows">
+              <div class="arrows brands-arrows__left">
+                <img src="img/brands/prev.png" alt="стрелка влево">
+              </div>
+              <div class="arrows brands-arrows__right">
+                <img src="img/brands/next.png" alt="стрелка вправо">
+              </div>
+            </div>
+            <!-- /.brands-arrows -->
+        </div>
+        <!-- /.brands-wrap -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /.brands -->
+
   </main>
 
 
@@ -268,6 +365,7 @@
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="js/sale.js"></script>
+  <!-- <script src="js/offer.js"></script> -->
   <script src="js/slick.min.js"></script>
   <script src="js/wow.min.js"></script>
   <script src="js/masonry.pkgd.min.js"></script>
@@ -277,6 +375,7 @@
 
     // Скрипт слайдера
     $(document).ready(function () {
+      // СЛАЙДЕР В БЛОКЕ HERO 
       $('.hero-slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -287,13 +386,14 @@
         prevArrow: $('.hero-arrows__left'),
         nextArrow: $('.hero-arrows__right'),
         dots: true,
-        responsive: [{
-          breakpoint: 768,
-          settings: {
-            swipe: true
-          }
-        }]
+        // responsive: [{
+        //   breakpoint: 768,
+        //   settings: {
+        //     swipe: true
+        //   }
+        // }]
       });
+      // СЛАЙДЕР В БЛОКЕ EDGE 
       $('.edge-slider').slick({
         slidesToShow: 4,
         slidesToScroll: 1,
@@ -308,6 +408,20 @@
         }]
       });
     });
+    // СЛАЙДЕР В БЛОКЕ BRAND
+    $('.brands-slider').slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        speed: 2000,
+        // prevArrow: $('.edge-arrows__left'),
+        // nextArrow: $('.edge-arrows__right'),
+        // responsive: [{
+        //   breakpoint: 768,
+        //   settings: {
+        //     swipe: true
+        //   }
+        // }]
+      });
   </script>
 </body>
 
