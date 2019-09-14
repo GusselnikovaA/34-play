@@ -213,7 +213,7 @@
     <section class="edge">
       <div class="container">
         <div class="edge-wrap">
-          <div class="edge-cards edge-slider">
+          <div class="edge-cards">
             <div class="edge__card edge-slider__item">
               <div class="edge__image">
                 <img src="img/edge/Icon_Delivery.svg" alt="иконка доставки">
@@ -270,6 +270,7 @@
   <script src="js/sale.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/wow.min.js"></script>
+  <script src="js/masonry.pkgd.min.js"></script>
   <script>
     // Инициализация WOW.js
     new WOW().init();
@@ -277,7 +278,6 @@
     // Скрипт слайдера
     $(document).ready(function () {
       $('.hero-slider').slick({
-        accessibility: true,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
@@ -295,7 +295,6 @@
         }]
       });
       $('.edge-slider').slick({
-        accessibility: true,
         slidesToShow: 4,
         slidesToScroll: 1,
         speed: 2000,
