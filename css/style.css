@@ -373,6 +373,11 @@ template {
   font-style: normal;
 }
 
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
   font-family: 'Proxima Nova Light', sans-serif;
 }
@@ -388,7 +393,7 @@ a {
 }
 
 .container {
-  max-width: 1350px;
+  max-width: 1300px;
   margin: auto;
 }
 
@@ -421,6 +426,20 @@ a {
 }
 
 @media (min-width: 992px) {
+  .top-list__item:hover, .top-list a:hover {
+    color: #CC1E2C;
+    cursor: pointer;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    font-family: 'Proxima Nova Bold', sans-serif;
+  }
+  .top__login:hover, .top__registration:hover, .top a:hover {
+    color: #CC1E2C;
+    cursor: pointer;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    font-family: 'Proxima Nova Bold', sans-serif;
+  }
   .bottom-list__item:hover:after {
     content: '';
     position: absolute;
@@ -437,6 +456,18 @@ a {
     background-color: #CC1E2C;
     -webkit-transition: 0.5s;
     transition: 0.5s;
+  }
+  .best-card:hover {
+    cursor: pointer;
+  }
+  .best-card__title:hover {
+    color: #CC1E2C;
+    cursor: pointer;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+  }
+  .about__button:hover {
+    color: #CC1E2C;
   }
 }
 
@@ -982,27 +1013,37 @@ a {
   }
 }
 
-.grid {
+.offer {
   display: none;
 }
 
-.grid_item {
-  float: left;
-  max-width: 967px;
-  min-height: 308px;
-  margin-bottom: 25px;
+.offer-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.grid_item--width2 {
-  max-width: 635px;
+.offer__element {
+  margin-right: 31px;
+  margin-bottom: 31px;
 }
 
-.grid_item--height2 {
-  min-height: 645px;
+.offer__element:nth-child(3) {
+  margin-right: 0;
 }
 
-.grid_item--width3 {
-  max-width: 302px;
+.offer__element:nth-child(4) {
+  margin-left: 335px;
+  margin-top: -340px;
+}
+
+.offer__element:nth-child(5) {
+  margin-right: 0;
 }
 
 .brand-wrap {
@@ -1042,15 +1083,14 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 151px;
   height: 61px;
 }
 
 .brand-arrows {
   position: absolute;
   top: 40px;
-  right: -23px;
-  left: -23px;
+  right: -30px;
+  left: -30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1065,6 +1105,10 @@ a {
   background-color: #E8F0F3;
   padding-top: 77px;
   padding-bottom: 31px;
+}
+
+.best-wrap {
+  position: relative;
 }
 
 .best__title {
@@ -1088,10 +1132,28 @@ a {
   padding-bottom: 35px;
 }
 
+.best-arrows {
+  position: absolute;
+  top: 50%;
+  right: -30px;
+  left: -30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: transparent;
+  z-index: 1;
+}
+
 .best-card {
   padding: 10px;
+  padding-bottom: 16px;
   max-width: 302px;
   background-color: #fff;
+  margin: auto;
+  outline: none;
 }
 
 .best-card__info {
@@ -1125,5 +1187,81 @@ a {
   font-size: 18px;
   line-height: 22px;
   letter-spacing: 0.9px;
+}
+
+.about {
+  padding-top: 70px;
+  padding-bottom: 93px;
+}
+
+.about-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 27px;
+  position: relative;
+}
+
+.about-wrap:before {
+  content: '';
+  position: absolute;
+  background-image: url("../img/about/frame.svg");
+  background-size: 1300px 228px;
+  top: 0;
+  left: 0;
+  width: 1300px;
+  height: 228px;
+}
+
+.about__subtitle {
+  font-family: 'Bebas Neue Regular';
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.454545px;
+  color: #818181;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.about__text {
+  max-width: 855px;
+  margin-top: 26px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 17px;
+  color: #484848;
+  margin-bottom: 20px;
+}
+
+.about__button {
+  padding: 13px 60px;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: none;
+  position: relative;
+}
+
+.about__button:before {
+  content: '';
+  position: absolute;
+  background-image: url("../img/about/Combined shape 387.svg");
+  background-size: 174px 40px;
+  top: 0;
+  left: 15px;
+  width: 174px;
+  height: 40px;
 }
 /*# sourceMappingURL=style.css.map */

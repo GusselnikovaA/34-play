@@ -1,27 +1,35 @@
-.grid 
+// .offer-block { 
+//     display: grid;
+//     grid-template-columns: 1fr 2fr 1fr;
+//     grid-template-areas: 
+//       "offer__element--1 offer__element--2 offer__element--2 offer__element--3"
+//       "offer__element--1 offer__element--4 offer__element--4 offer__element--3"
+//       "offer__element--6 offer__element--6 offer__element--6 offer__element--5"
+//       "offer__element--6 offer__element--6 offer__element--6 offer__element--5"
+// }
+
+.offer 
   display: none
-  &_item 
-    float: left
-    max-width: 967px
-    min-height: 308px
-    margin-bottom: 25px
-    &--width2
-      max-width: 635px
-    &--height2
-      min-height: 645px
-    &--width3 
-      max-width: 302px
-// .grid 
-//   &_item 
-//     float: left
-//     width: 73%
-//     min-height: 308px
-//     margin-bottom: 20px
-//     &--width2
-//       width: 48%
-//     &--height2
-//       min-height: 645px
-//     &--width3 
-//       width: 23%
+  &-block 
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+  &__element 
+    margin-right: 31px
+    margin-bottom: 31px 
+    &:nth-child(3)
+      margin-right: 0
+    &:nth-child(4)
+      margin-left: 335px
+      margin-top: -340px
+    &:nth-child(5)
+      // margin-top: -170px
+      margin-right: 0
+    // &:nth-child(6)
+    //   margin-top: -340px
+      
+      
+    
+
     
     

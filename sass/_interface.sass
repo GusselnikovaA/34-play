@@ -1,3 +1,6 @@
+*
+  box-sizing: border-box
+  
 body 
   font-family: 'Proxima Nova Light', sans-serif
 
@@ -10,7 +13,7 @@ a
   cursor: pointer
 
 .container 
-  max-width: 1350px
+  max-width: 1300px
   margin: auto
 
 .button 
@@ -37,6 +40,21 @@ a
 // HOVER ЭФФЕКТЫ 
 @media (min-width: 992px)
   // HOVER эффекты блока HEADER 
+  .top
+    &-list
+      &__item, a
+        &:hover
+          color: #CC1E2C
+          cursor: pointer
+          transition: 0.2s
+          +bold
+    &__login, &__registration, a
+      &:hover
+        color: #CC1E2C
+        cursor: pointer
+        transition: 0.2s
+        +bold
+
   .bottom 
     &-list
       &__item 
@@ -59,4 +77,19 @@ a
       &:hover 
         background-color: #CC1E2C
         transition: 0.5s 
+  // HOVER эффекты блока с лучшими товарами BEST 
+  .best 
+    &-card
+      &:hover 
+        cursor: pointer
+      &__title
+        &:hover
+          color: #CC1E2C
+          cursor: pointer
+          transition: 0.2s
+  // HOVER эффекты блока о компании
+  .about 
+    &__button 
+      &:hover
+        color: #CC1E2C
   

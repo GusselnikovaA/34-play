@@ -2,6 +2,8 @@
   background-color: #E8F0F3
   padding-top: 77px
   padding-bottom: 31px
+  &-wrap 
+    position: relative
   &__title 
     margin-top: 0
     margin-bottom: 69px
@@ -15,12 +17,22 @@
     display: flex
     justify-content: space-between
     padding-bottom: 35px
-    // &__item 
-    //   max-width: 23%
+  &-arrows
+    position: absolute
+    top: 50%
+    right: -30px
+    left: -30px
+    display: flex
+    justify-content: space-between
+    background-color: transparent
+    z-index: 1
   &-card 
     padding: 10px
+    padding-bottom: 16px
     max-width: 302px
     background-color: #fff
+    margin: auto
+    outline: none
     &__info 
       display: flex
       flex-direction: column
