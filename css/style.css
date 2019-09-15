@@ -413,6 +413,15 @@ a {
   cursor: pointer;
 }
 
+.title {
+  font-family: 'Bebas Neue Regular';
+  font-size: 36px;
+  line-height: 40px;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
 @media (max-width: 1300px) {
   .container {
     max-width: 90%;
@@ -431,14 +440,12 @@ a {
     cursor: pointer;
     -webkit-transition: 0.2s;
     transition: 0.2s;
-    font-family: 'Proxima Nova Bold', sans-serif;
   }
   .top__login:hover, .top__registration:hover, .top a:hover {
     color: #CC1E2C;
     cursor: pointer;
     -webkit-transition: 0.2s;
     transition: 0.2s;
-    font-family: 'Proxima Nova Bold', sans-serif;
   }
   .bottom-list__item:hover:after {
     content: '';
@@ -1114,12 +1121,6 @@ a {
 .best__title {
   margin-top: 0;
   margin-bottom: 69px;
-  font-family: 'Bebas Neue Regular';
-  font-size: 36px;
-  line-height: 40px;
-  letter-spacing: 1.8px;
-  text-transform: uppercase;
-  text-align: center;
 }
 
 .best-slider {
@@ -1130,6 +1131,11 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-bottom: 35px;
+  outline: none;
+}
+
+.best-slider__item {
+  outline: none;
 }
 
 .best-arrows {
@@ -1252,6 +1258,7 @@ a {
   text-transform: uppercase;
   border: none;
   position: relative;
+  background-color: transparent;
 }
 
 .about__button:before {
@@ -1263,5 +1270,101 @@ a {
   left: 15px;
   width: 174px;
   height: 40px;
+}
+
+.follow {
+  padding-top: 38px;
+  background-color: #E8F0F3;
+  position: relative;
+}
+
+.follow__title {
+  margin-bottom: 14px;
+}
+
+.follow__link, .follow a {
+  text-align: center;
+  font-size: 16px;
+  line-height: 0px;
+  letter-spacing: 0.8px;
+  color: #131313;
+  margin-bottom: 33px;
+}
+
+.follow-arrows {
+  position: absolute;
+  top: 153px;
+  right: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: transparent;
+  z-index: 1;
+}
+
+.follow-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.follow__subtitle {
+  font-size: 14px;
+  line-height: 27px;
+  letter-spacing: 1.45px;
+  text-transform: uppercase;
+}
+
+.follow-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.follow__input {
+  width: 239px;
+}
+
+.follow__gender {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 154px;
+}
+
+.follow__input, .follow__gender {
+  padding: 13px;
+  background-color: #fff;
+}
+
+.follow__male, .follow__female {
+  margin-right: 6px;
+  margin-left: 13px;
+}
+
+.follow__button {
+  padding: 13px 30px;
+  background-color: #000000;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 1.12px;
 }
 /*# sourceMappingURL=style.css.map */
