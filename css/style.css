@@ -982,6 +982,10 @@ a {
   }
 }
 
+.grid {
+  display: none;
+}
+
 .grid_item {
   float: left;
   max-width: 967px;
@@ -1005,7 +1009,6 @@ a {
   padding: 30px 0;
   padding-bottom: 50px;
   position: relative;
-  max-width: 1300px;
 }
 
 .brand-slider {
@@ -1056,5 +1059,71 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   background-color: transparent;
+}
+
+.best {
+  background-color: #E8F0F3;
+  padding-top: 77px;
+  padding-bottom: 31px;
+}
+
+.best__title {
+  margin-top: 0;
+  margin-bottom: 69px;
+  font-family: 'Bebas Neue Regular';
+  font-size: 36px;
+  line-height: 40px;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.best-slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 35px;
+}
+
+.best-card {
+  padding: 10px;
+  max-width: 302px;
+  background-color: #fff;
+}
+
+.best-card__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 16px;
+}
+
+.best-card__title {
+  max-width: 230px;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  letter-spacing: 0.35px;
+  margin-bottom: 8px;
+}
+
+.best-card__price {
+  font-family: 'Proxima Nova Bold', sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.9px;
 }
 /*# sourceMappingURL=style.css.map */

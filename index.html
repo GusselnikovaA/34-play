@@ -358,6 +358,86 @@
     </section>
     <!-- /.brand -->
 
+    <!-- СЕКЦИЯ СЛАЙДЕР С ЛУЧШИМИ ТОВАРАМИ -->
+    <div class="section best">
+      <div class="container">
+        <h2 class="best__title">Лучшие товары</h2>
+        <div class="best-slider">
+          <div class="best-slider__items">
+            <div class="best-card">
+              <div class="best-card__image">
+                <img src="img/best/socks.png" alt="носки">
+              </div>
+              <div class="best-card__info">
+                <span class="best-card__title">Футболка TRAILHEAD MTS-FASTER белая</span>
+                <span class="best-card__price">17 359 ₽</span>
+              </div>
+            </div>
+            <!-- /.best-card -->
+          </div>
+          <!-- /.best-slider__items -->
+          <div class="best-slider__items">
+            <div class="best-card">
+              <div class="best-card__image">
+                <img src="img/best/tshirt-red.png" alt="красная майка">
+              </div>
+              <!-- /.best-card__image -->
+              <div class="best-card__info">
+                <span class="best-card__title">Футболка TRAILHEAD MTS-FASTER белая</span>
+                <span class="best-card__price">17 359 ₽</span>
+              </div>
+            </div>
+            <!-- /.best-card -->
+          </div>
+          <!-- /.best-slider__items -->
+          <div class="best-slider__items">
+            <div class="best-card">
+              <div class="best-card__image">
+                <img src="img/best/boots.png" alt="ботинки">
+              </div>
+              <div class="best-card__info">
+                <span class="best-card__title">Футболка TRAILHEAD MTS-FASTER белая</span>
+                <span class="best-card__price">17 359 ₽</span>
+              </div>
+            </div>
+            <!-- /.best-card -->
+          </div>
+          <!-- /.best-slider__items -->
+          <div class="best-slider__items">
+            <div class="best-card">
+              <div class="best-card__image">
+                <img src="img/best/tshirt-2.png" alt="белая майка">
+              </div>
+              <!-- /.best-card__image -->
+              <div class="best-card__info">
+                <span class="best-card__title">Футболка TRAILHEAD MTS-FASTER белая</span>
+                <span class="best-card__price">17 359 ₽</span>
+              </div>
+            </div>
+            <!-- /.best-card -->
+          </div>
+          <!-- /.best-slider__items -->
+          <div class="best-slider__items">
+            <div class="best-card">
+              <div class="best-card__image">
+                <img src="img/best/tshirt-red.png" alt="красная майка">
+              </div>
+              <!-- /.best-card__image -->
+              <div class="best-card__info">
+                <span class="best-card__title">Футболка TRAILHEAD MTS-FASTER белая</span>
+                <span class="best-card__price">17 359 ₽</span>
+              </div>
+            </div>
+            <!-- /.best-card -->
+          </div>
+          <!-- /.best-slider__items -->
+        </div>
+        <!-- /.best-slider -->
+      </div>
+      <!-- /.container -->
+    </div>
+    <!-- /.section best -->
+
   </main>
 
 
@@ -414,6 +494,25 @@
         speed: 2000,
         prevArrow: $('.brand-arrows__left'),
         nextArrow: $('.brand-arrows__right'),
+        // responsive: [{
+        //   breakpoint: 768,
+        //   settings: {
+        //     swipe: true
+        //   }
+        // }]
+      });
+      // СЛАЙДЕР В БЛОКЕ BEST
+      $('.best-slider').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        speed: 2000,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        infinite: true,
+        speed: 2000,
+        dots: true,
+        // prevArrow: $('.brand-arrows__left'),
+        // nextArrow: $('.brand-arrows__right'),
         // responsive: [{
         //   breakpoint: 768,
         //   settings: {
