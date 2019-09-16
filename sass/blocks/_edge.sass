@@ -1,7 +1,8 @@
 .edge
   &-wrap 
     padding: 51px 0
-  &-slider
+    position: relative
+  &-cards
     display: flex
     justify-content: space-between
     align-items: center
@@ -32,8 +33,40 @@
   &__text 
     margin: 0
     max-width: 169px
+  &-slider 
+    &__item 
+      // display: flex
+      // justify-content: center 
+      // align-items: center
+      margin: auto
   &-arrows 
-    display: none
+    position: absolute
+    top: 30%
+    right: 0
+    left: 0
+    display: flex
+    justify-content: space-between
+    background-color: transparent
+    z-index: 1
+
+@media (min-width: 1351px)  
+  .edge 
+    &-arrows
+      display: none
+
+@media (max-width: 1350px)  
+  .edge 
+    &__card
+      &:after 
+        display: none
+    // &__image 
+    //   display: flex
+    //   justify-content: center
+    // &__text
+    //   display: flex
+    //   justify-content: center
+    //   text-align: center
+    //   margin: auto
 
 // @media (max-width: 1350px)
 //   .edge 
