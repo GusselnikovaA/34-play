@@ -1,32 +1,45 @@
-// .offer-block { 
-//     display: grid;
-//     grid-template-columns: 1fr 2fr 1fr;
-//     grid-template-areas: 
-//       "offer__element--1 offer__element--2 offer__element--2 offer__element--3"
-//       "offer__element--1 offer__element--4 offer__element--4 offer__element--3"
-//       "offer__element--6 offer__element--6 offer__element--6 offer__element--5"
-//       "offer__element--6 offer__element--6 offer__element--6 offer__element--5"
-// }
-
 .offer 
-  display: none
   &-block 
     display: flex
-    flex-wrap: wrap
+    flex-direction: column
     justify-content: space-between
+    flex-wrap: wrap
+    height: 990px
+  &-left 
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    flex-wrap: wrap
+    height: 995px
+    &__top 
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      flex-wrap: wrap
+      height: 650px
+    &__right 
+      height: 650px
   &__element 
     margin-right: 31px
     margin-bottom: 31px 
-    &:nth-child(3)
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      background-image: linear-gradient(to top, rgba(#000, 0.8), rgba(255, 255, 255, 0) 100%)
+      opacity: 0
+      transition: 0.2s
+    img 
+      display: block
+      min-height: 100%
+    &--3, &--5 
       margin-right: 0
-    &:nth-child(4)
-      margin-left: 335px
-      margin-top: -340px
-    &:nth-child(5)
-      // margin-top: -170px
-      margin-right: 0
-    // &:nth-child(6)
-    //   margin-top: -340px
+    &--6
+      margin-bottom: 0
       
       
     

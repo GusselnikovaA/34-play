@@ -83,6 +83,14 @@ a
       &:hover 
         background-color: #CC1E2C
         transition: 0.5s 
+  // HOVER эффекты блока с предложениями
+  .offer
+    &__element
+      &:hover 
+        cursor: pointer
+        &:before
+          opacity: 1
+
   // HOVER эффекты блока с лучшими товарами BEST 
   .best 
     &-card
@@ -97,5 +105,5 @@ a
   .about 
     &__button 
       &:hover
-        color: #CC1E2C
+        +bold
   
