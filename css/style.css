@@ -358,6 +358,14 @@ template {
 }
 
 @font-face {
+  font-family: 'Proxima Nova Regular';
+  src: url("../fonts/ProximaNova/ProximaNova-Regular.eot");
+  src: url("../fonts/ProximaNova/ProximaNova-Regular.eot.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova/ProximaNova-Regular.woff") format("woff"), url("../fonts/ProximaNova/ProximaNova-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Proxima Nova Bold';
   src: url("../fonts/ProximaNova/ProximaNova-Bold.eot");
   src: url("../fonts/ProximaNova/ProximaNova-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova/ProximaNova-Bold.woff") format("woff"), url("../fonts/ProximaNova/ProximaNova-Bold.ttf") format("truetype");
@@ -369,6 +377,14 @@ template {
   font-family: 'Bebas Neue Regular';
   src: url("../fonts/BebasNeue/BebasNeueRegular.eot");
   src: url("../fonts/BebasNeue/BebasNeueRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/BebasNeue/BebasNeueRegular.woff") format("woff"), url("../fonts/BebasNeue/BebasNeueRegular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bebas Neue Light';
+  src: url("../fonts/BebasNeue/BebasNeue-Light.eot");
+  src: url("../fonts/BebasNeue/BebasNeue-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/BebasNeue/BebasNeue-Light.woff") format("woff"), url("../fonts/BebasNeue/BebasNeueLight.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -467,7 +483,7 @@ input[type='radio']:checked:after {
   color: #AFAFAF;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1350px) {
   .container {
     max-width: 90%;
   }
@@ -1000,7 +1016,11 @@ input[type='radio']:checked:after {
   }
 }
 
-.edge-cards {
+.edge-wrap {
+  padding: 51px 0;
+}
+
+.edge-slider {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1010,7 +1030,6 @@ input[type='radio']:checked:after {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 51px 0;
 }
 
 .edge__card {
@@ -1060,14 +1079,8 @@ input[type='radio']:checked:after {
   display: none;
 }
 
-@media (max-width: 1300px) {
-  .edge__card {
-    padding: 0 15px;
-    padding-left: 5px;
-  }
-  .edge__image {
-    margin-right: 10px;
-  }
+.offer {
+  display: none;
 }
 
 .offer-block {
@@ -1298,6 +1311,7 @@ input[type='radio']:checked:after {
 }
 
 .about {
+  display: none;
   padding-top: 70px;
   padding-bottom: 93px;
 }
@@ -1340,6 +1354,7 @@ input[type='radio']:checked:after {
   color: #818181;
   text-transform: uppercase;
   margin-bottom: 5px;
+  font-family: 'Bebas Neue Light', sans-serif;
 }
 
 .about__text {
@@ -1425,6 +1440,7 @@ input[type='radio']:checked:after {
   line-height: 27px;
   letter-spacing: 1.45px;
   text-transform: uppercase;
+  font-family: 'Proxima Nova Regular', sans-serif;
 }
 
 .follow-form {
@@ -1471,6 +1487,7 @@ input[type='radio']:checked:after {
   line-height: 15px;
   letter-spacing: 1.12px;
   border: none;
+  font-family: 'Proxima Nova Bold', sans-serif;
 }
 
 .footer {
@@ -1536,17 +1553,23 @@ input[type='radio']:checked:after {
 }
 
 .footer__title {
+  margin-bottom: 10px;
   font-size: 12px;
   line-height: 15px;
   letter-spacing: 1.12px;
   text-transform: uppercase;
   color: #FFFFFF;
+  font-family: 'Proxima Nova Regular', sans-serif;
 }
 
 .footer-list__item a {
   font-size: 12px;
   line-height: 24px;
   color: #9D9C9C;
+}
+
+.footer-connect {
+  padding-top: 10px;
 }
 
 .footer-contacts {
@@ -1566,23 +1589,31 @@ input[type='radio']:checked:after {
   margin-bottom: 38px;
 }
 
+.footer__phone {
+  margin-bottom: 8px;
+}
+
 .footer__schedule {
   color: #757474;
+  padding-left: 5px;
   padding-bottom: 3px;
+  margin-bottom: 8px;
   font-family: 'Proxima Nova Thin', sans-serif;
 }
 
 .footer__email {
+  padding-left: 5px;
   color: #757474;
   font-size: 14px;
   line-height: 17px;
 }
 
 .footer__contacts {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .footer-social {
+  padding-left: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

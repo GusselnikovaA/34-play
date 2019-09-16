@@ -210,7 +210,7 @@
     <section class="edge">
       <div class="container">
         <div class="edge-wrap">
-          <div class="edge-cards">
+          <div class="edge-cards edge-slider">
             <div class="edge__card edge-slider__item">
               <div class="edge__image">
                 <img src="img/edge/Icon_Delivery.svg" alt="иконка доставки">
@@ -673,7 +673,7 @@
           <div class="footer-contacts footer__contacts">
             <a href="tel:+7(495)42-251-31" class="phone footer__phone">
               <span class="phone--thin">+7 (800)</span>
-              500-17-39
+              222-34-41
             </a>
             <span class="footer__schedule">пн-пт, 11:00–18:00</span>
             <a href="mailto:shop@34play.me" class="footer__email">shop@34play.me</a>
@@ -730,20 +730,22 @@
         nextArrow: $('.hero-arrows__right'),
         dots: true,
       });
+
       // СЛАЙДЕР В БЛОКЕ EDGE 
       $('.edge-slider').slick({
         slidesToShow: 4,
-        slidesToScroll: 1,
+        slidesToScroll: 0,
         speed: 2000,
-        prevArrow: $('.edge-arrows__left'),
-        nextArrow: $('.edge-arrows__right'),
-        responsive: [{
-          breakpoint: 768,
-          settings: {
-            swipe: true
-          }
-        }]
+        // prevArrow: $('.edge-arrows__left'),
+        // nextArrow: $('.edge-arrows__right'),
+        // responsive: [{
+        //   breakpoint: 768,
+        //   settings: {
+        //     swipe: true
+        //   }
+        // }]
       });
+
       // СЛАЙДЕР В БЛОКЕ BRAND
       $('.brand-slider').slick({
         slidesToShow: 6,
@@ -758,6 +760,7 @@
         //   }
         // }]
       });
+
       // СЛАЙДЕР В БЛОКЕ BEST
       $('.best-slider').slick({
         slidesToShow: 4,
@@ -777,6 +780,7 @@
         //   }
         // }]
       });
+
       // СЛАЙДЕР В БЛОКЕ FOLLOW
       $('.follow-slider').slick({
         slidesToShow: 8,
