@@ -5,7 +5,57 @@
   &-wrap 
     display: flex
     justify-content: space-between
+  &-nav 
+    display: flex
+    flex-direction: column 
+    width: 80%
+    &--top 
+      display: flex
+      justify-content: space-between
+    &--bottom 
+      display: flex
+      justify-content: space-between
+      font-size: 12px
+      line-height: 16px
+      color: #757474
+  &__copyright 
+    max-width: 695px
+    margin-right: 20px
+  &__creator 
+    max-width: 120px
+    margin-right: 45px
+    &--bold 
+      display: block
+      +bold
+  &__title 
+    font-size: 12px
+    line-height: 15px
+    letter-spacing: 1.12px
+    text-transform: uppercase
+    color: #FFFFFF
+  &-list
+    &__item 
+      a
+        font-size: 12px
+        line-height: 24px
+        color: #9D9C9C
+  &-contacts 
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+  &__logo 
+    margin-bottom: 38px
+  &__schedule
+    color: #757474
+    padding-bottom: 3px
+    +thin
+  &__email
+    color: #757474
+    font-size: 14px
+    line-height: 17px
+  &__contacts
+    margin-bottom: 30px
   &-social 
     display: flex
-    list-style: none
-    padding: 0
+    &__item 
+      margin-right: 22px
