@@ -34,16 +34,21 @@
     margin: 0
     max-width: 169px
   &-slider 
+    display: none
     &__item 
-      // display: flex
-      // justify-content: center 
-      // align-items: center
+      display: flex
+      justify-content: center 
+      align-items: center
       margin: auto
+    &__card 
+      display: flex
+      align-items: center
+      justify-content: center
   &-arrows 
     position: absolute
     top: 30%
-    right: 0
-    left: 0
+    right: -30px
+    left: -30px
     display: flex
     justify-content: space-between
     background-color: transparent
@@ -56,22 +61,21 @@
 
 @media (max-width: 1350px)  
   .edge 
-    &__card
-      &:after 
-        display: none
-    // &__image 
-    //   display: flex
-    //   justify-content: center
-    // &__text
-    //   display: flex
-    //   justify-content: center
-    //   text-align: center
-    //   margin: auto
+    &-cards
+      display: none
+    &-slider 
+      display: flex
 
-// @media (max-width: 1350px)
-//   .edge 
-//     &__card 
-//       padding: 0 15px
-//       padding-left: 5px
-//     &__image 
-//       margin-right: 10px
+@media (max-width: 700px) 
+  .edge 
+    &-wrap
+      padding: 24px 0
+    &__image 
+      margin-right: 14px
+    &-arrows 
+      top: 30%
+      right: 10px
+      left: 10px
+
+
+

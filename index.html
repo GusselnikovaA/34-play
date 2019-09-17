@@ -210,29 +210,30 @@
     <section class="edge">
       <div class="container">
         <div class="edge-wrap">
-          <div class="edge-cards edge-slider" id="edge">
-            <div class="edge__card edge-slider__item">
+          <!-- БЛОК ДЕКСТОПНОЙ ВЕРСИИ -->
+          <div class="edge-cards" id="edge">
+            <div class="edge__card">
               <div class="edge__image">
                 <img src="img/edge/Icon_Delivery.svg" alt="иконка доставки">
               </div>
               <p class="edge__text">Курьерская доставка по всей России</p>
             </div>
             <!-- /.edge__card -->
-            <div class="edge__card edge-slider__item">
+            <div class="edge__card">
               <div class="edge__image">
                 <img src="img/edge/Icon_Sizes.svg" alt="иконка одежда">
               </div>
               <p class="edge__text">Несколько размеров на выбор и бесплатная примерка</p>
             </div>
             <!-- /.edge__card -->
-            <div class="edge__card edge-slider__item">
+            <div class="edge__card">
               <div class="edge__image">
                 <img src="img/edge/Icon_Payment.svg" alt="иконка оплаты">
               </div>
               <p class="edge__text">Удобные способы оплаты: наличные; электронные платежи</p>
             </div>
             <!-- /.edge__card -->
-            <div class="edge__card edge-slider__item">
+            <div class="edge__card">
               <div class="edge__image">
                 <img src="img/edge/Icon_Product_Back.svg" alt="иконка возврата товара">
               </div>
@@ -241,7 +242,52 @@
             <!-- /.edge__card -->
           </div>
           <!-- /.edge-cards -->
-          
+
+          <!-- БЛОК МОБИЛЬНОЙ ВЕРСИИ -->
+          <div class="edge-slider">
+            <div class="edge-slider__item">
+              <div class="edge-slider__card">
+                <div class="edge__image">
+                  <img src="img/edge/Icon_Delivery.svg" alt="иконка доставки">
+                </div>
+                <p class="edge__text">Курьерская доставка по всей России</p>
+              </div>
+              <!-- /.edge-slider__card -->
+            </div>
+            <!-- /.edge-slider__item-->
+            <div class="edge-slider__item">
+              <div class="edge-slider__card">
+                <div class="edge__image">
+                  <img src="img/edge/Icon_Sizes.svg" alt="иконка одежда">
+                </div>
+                <p class="edge__text">Несколько размеров на выбор и бесплатная примерка</p>
+              </div>
+              <!-- /.edge-slider__card -->
+            </div>
+            <!-- /.edge-slider__item--->
+            <div class="edge-slider__item">
+              <div class="edge-slider__card">
+                <div class="edge__image">
+                  <img src="img/edge/Icon_Payment.svg" alt="иконка оплаты">
+                </div>
+                <p class="edge__text">Удобные способы оплаты: наличные; электронные платежи</p>
+              </div>
+              <!-- /.edge-slider__card -->
+            </div>
+            <!-- /.edge-slider__item--->
+            <div class="edge-slider__item">
+              <div class="edge-slider__card">
+                <div class="edge__image">
+                  <img src="img/edge/Icon_Product_Back.svg" alt="иконка возврата товара">
+                </div>
+                <p class="edge__text">Возврат товара в течение 14 дней</p>
+              </div>
+              <!-- /.edge-slider__card -->
+            </div>
+            <!-- /.edge-slider__item- -->
+          </div>
+          <!-- /.edge-slider -->
+
           <!-- СТРЕЛКИ СЛАЙДЕРА -->
           <div class="edge-arrows">
             <div class="arrows edge-arrows__left">
@@ -736,39 +782,43 @@
       });
 
       // СЛАЙДЕР В БЛОКЕ EDGE 
-      function slickify() {
-        $('.edge-slider').slick({
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          speed: 2000,
-          mobileFirst: true,
-          prevArrow: $('.edge-arrows__left'),
-          nextArrow: $('.edge-arrows__right'),
-          responsive: [{
-            breakpoint: 1350,
-            settings: "unslick",
-          }]
-        });
-      }
-      slickify();
-      $(window).resize(function () {
-        var $windowWidth = $(window).width();
-        if ($windowWidth > 1350) {
-          slickify();
-        }
+      $('.edge-slider').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        speed: 2000,
+        prevArrow: $('.edge-arrows__left'),
+        nextArrow: $('.edge-arrows__right'),
+        responsive: [{
+          breakpoint: 850,
+          settings: {
+            slidesToShow: 1,
+          },
+          // breakpoint: 580,
+          // settings: {
+          //   slidesToShow: 1,
+          // }
+        }]
       });
-      // $('.edge-slider').slick({
-      //   slidesToShow: 3,
-      //   slidesToScroll: 1,
-      //   speed: 2000,
-      // prevArrow: $('.edge-arrows__left'),
-      // nextArrow: $('.edge-arrows__right'),
-      //   responsive: [{
-      //     breakpoint: 1350,
-      //     settings: {
+      // function slickify() {
+      //   $('.edge-slider').slick({
+      //     slidesToShow: 3,
+      //     slidesToScroll: 1,
+      //     speed: 2000,
+      //     mobileFirst: true,
+      //     prevArrow: $('.edge-arrows__left'),
+      //     nextArrow: $('.edge-arrows__right'),
+      //     responsive: [{
+      //       breakpoint: 1350,
       //       settings: "unslick",
-      //     }
-      //   }]
+      //     }]
+      //   });
+      // }
+      // slickify();
+      // $(window).resize(function () {
+      //   var $windowWidth = $(window).width();
+      //   if ($windowWidth > 1350) {
+      //     slickify();
+      //   }
       // });
 
       // СЛАЙДЕР В БЛОКЕ BRAND
@@ -778,12 +828,20 @@
         speed: 2000,
         prevArrow: $('.brand-arrows__left'),
         nextArrow: $('.brand-arrows__right'),
-        // responsive: [{
-        //   breakpoint: 768,
-        //   settings: {
-        //     swipe: true
-        //   }
-        // }]
+        responsive: [{
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 5,
+          },
+          breakpoint: 1000,
+          settings: {
+            slidesToShow: 4,
+          },
+          breakpoint: 750,
+          settings: {
+            slidesToShow: 3,
+          },
+        }]
       });
 
       // СЛАЙДЕР В БЛОКЕ BEST

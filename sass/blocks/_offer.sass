@@ -1,5 +1,4 @@
 .offer 
-  display: none
   &-block 
     display: flex
     flex-direction: column
@@ -44,17 +43,19 @@
       
 @media (max-width: 1350px)
   .offer 
-  // &-block 
-  //   height: 990px
-  // &-left 
-  //   height: 995px
-  //   &__top 
-  //     height: 650px
-  //   &__right 
-  //     height: 650px
-    &__element 
-      margin-right: 10px
-      margin-bottom: 10px
+    // &__element 
+    //   margin-right: 10px
+    //   margin-bottom: 10px
+    //   &--3, &--5
+    //     display: none
+    &-block 
+      height: 990px
+    &-left 
+      height: 995px
+      &__top 
+        height: 650px
+      &__right 
+        height: 650px
       // position: relative
 
       
