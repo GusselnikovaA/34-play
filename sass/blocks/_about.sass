@@ -7,7 +7,6 @@
     justify-content: center
     align-items: center
     padding: 27px
-    // border: 0.5px dotted #9B9B9B
     position: relative
     &:before 
       content: ''
@@ -36,6 +35,9 @@
     line-height: 17px
     color: #484848
     margin-bottom: 20px
+    &--mobile 
+      
+      display: none
   &__button 
     padding: 13px 60px
     font-size: 12px
@@ -54,4 +56,47 @@
       left: 15px 
       width: 174px 
       height: 40px
+
+@media (max-width: 1350px)
+  .about
+    &-wrap 
+      border-top: 2px dotted #C4C4C4
+      border-bottom: 2px dotted #C4C4C4
+      outline: none
+      &:before 
+        display: none  
+
+@media (max-width: 568px)
+  .about 
+    &__subtitle 
+      max-width: 180px
+      margin-bottom: 15px
+    &__logo 
+      max-width: 230px
+    &__text
+      &--dekstop 
+        display: none
+      &--mobile 
+        display: flex
+        margin-bottom: 40px
+        line-height: 20px
+
+@media (max-width: 320px)
+  .about 
+    &-wrap
+      padding: 37px
+      border: 0px
+      position: relative
+      &:before  
+        content: ''
+        position: absolute
+        background-image: url('../img/about/mini-frame.png')
+        background-size: 298px 438px
+        top: 10px
+        left: 10px
+        width: 298px
+        height: 438px
+        display: block
+    &__text
+      max-width: 252px
       

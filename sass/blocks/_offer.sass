@@ -1,10 +1,16 @@
 .offer 
   &-block 
-    display: flex
-    flex-direction: column
-    justify-content: space-between
-    flex-wrap: wrap
-    height: 990px
+    &--dekstop
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      flex-wrap: wrap
+      height: 990px
+    &--mobile
+      justify-content: space-between
+      align-items: center
+      flex-wrap: wrap 
+      display: none
   &-left 
     display: flex
     flex-direction: column
@@ -40,23 +46,56 @@
       margin-right: 0
     &--6
       margin-bottom: 0
+    &--mobile
+      display: flex
+      justify-content: center
+      width: 33%
+      margin-right: 0
+      margin-bottom: 31px 
+  &__image
+    &--mobile
+      position: relative
+      &:before
+        content: ''
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        background-image: linear-gradient(to top, rgba(#000, 0.8), rgba(255, 255, 255, 0) 100%)
+        opacity: 0
+        transition: 0.2s
       
 @media (max-width: 1350px)
   .offer 
-    // &__element 
-    //   margin-right: 10px
-    //   margin-bottom: 10px
-    //   &--3, &--5
-    //     display: none
     &-block 
-      height: 990px
-    &-left 
-      height: 995px
-      &__top 
-        height: 650px
-      &__right 
-        height: 650px
-      // position: relative
+      &--dekstop
+        display: none
+      &--mobile 
+        display: flex
+
+@media (max-width: 1050px)
+  .offer 
+    &__element
+      &--mobile 
+        margin-bottom: 2px
+
+@media (max-width: 568px)
+  .offer 
+    &-block 
+      &--mobile 
+        justify-content: center
+    &__element
+      &--mobile 
+        width: 45%
+        margin: 10px
+
+@media (max-width: 400px)
+  .offer 
+    &__element
+      &--mobile 
+        width: 100%
+        margin-bottom: 0
 
       
     

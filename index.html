@@ -308,8 +308,7 @@
     <!-- СЕКЦИЯ С ПРЕДЛОЖЕНИЯМИ -->
     <section class="offer">
       <div class="container">
-        <div class="offer-block">
-
+        <div class="offer-block--dekstop">
           <div class="offer-left">
             <div class="offer-left__top">
               <div class="offer__element offer__element--1">
@@ -334,7 +333,6 @@
             <!-- /.offer-left__bottom -->
           </div>
           <!-- /.offer-block__left -->
-
           <div class="offer-right">
             <div class="offer__element offer__element--3">
               <img src="img/offer/img-3.png" alt="">
@@ -343,9 +341,43 @@
               <img src="img/offer/img-5.png" alt="">
             </div>
           </div>
+          <!-- /.offer-block--right -->
         </div>
-        <!-- /.offer-block--right -->
         <!-- /.offer-block -->
+        <!-- мобильная версия раскладки -->
+        <div class="offer-block--mobile">
+          <div class="offer__element--mobile">
+            <div class="offer__image--mobile">
+              <img src="img/offer/1.png" alt="">
+            </div>
+          </div>
+          <div class="offer__element--mobile">
+              <div class="offer__image--mobile">
+                  <img src="img/offer/2.jpg" alt="">
+                </div>
+          </div>
+          <div class="offer__element--mobile">
+              <div class="offer__image--mobile">
+                  <img src="img/offer/3.jpg" alt="">
+                </div>
+          </div>
+          <div class="offer__element--mobile">
+              <div class="offer__image--mobile">
+                  <img src="img/offer/4.jpg" alt="">
+                </div>
+          </div>
+          <div class="offer__element--mobile">
+              <div class="offer__image--mobile">
+                  <img src="img/offer/5.jpg" alt="">
+                </div>
+          </div>
+          <div class="offer__element--mobile">
+              <div class="offer__image--mobile">
+                  <img src="img/offer/6.jpg" alt="">
+                </div>
+          </div>
+        </div>
+        <!-- /.offer-block--mobile -->
       </div>
       <!-- /.container -->
     </section>
@@ -387,24 +419,9 @@
                 <img src="img/brand/Layer 36.png" alt="">
               </div>
             </div>
-            <div class="brand-slider__item">
-              <div class="brand__image">
-                <img src="img/brand/Layer 57.png" alt="">
-              </div>
-            </div>
-            <div class="brand-slider__item">
-              <div class="brand__image">
-                <img src="img/brand/Vector Smart Object.png" alt="">
-              </div>
-            </div>
-            <div class="brand-slider__item">
-              <div class="brand__image">
-                <img src="img/brand/Vector Smart Object-2.png" alt="">
-              </div>
-            </div>
-
           </div>
           <!-- /.brand-slider -->
+
           <!-- СТРЕЛКИ СЛАЙДЕРА -->
           <div class="brand-arrows">
             <div class="arrows brand-arrows__left">
@@ -519,11 +536,15 @@
           <div class="about__logo">
             <img src="img/about/Vector Smart Object.svg" alt="Лого компании">
           </div>
-          <p class="about__text">
+          <p class="about__text about__text--dekstop">
             34Play - это уличная молодежная одежда. Это свобода и стиль жизни. Это сеть розничных магазинов в
             Санкт-Петербурге и Москве, а также доставка по России и миру. 34Play - это лучшие бренды уличной и
             спортивной одежды: американский Converse, японский Asics, питерский Trailhead и легендарный Thrasher.
           </p>
+          <p class="about__text about__text--mobile">
+              С тех пор, как Trailhead заявил 
+              о себе на улицах Saint Ghetto, прошло десять лет. За это время Trailhead Wear Indastree создал для тебя не одну коллекцию по-настоящему качественной одежды, которую удобно и приятно носить. За это время ведущие спортсмены выбрали Trailhead в качестве своей экипировки, а музыканты – повседневной и концертной одежды.
+            </p>
           <button class="button about__button">Подробнее</button>
         </div>
         <!-- /.about-wrap -->
@@ -793,10 +814,6 @@
           settings: {
             slidesToShow: 1,
           },
-          // breakpoint: 580,
-          // settings: {
-          //   slidesToShow: 1,
-          // }
         }]
       });
       // function slickify() {
@@ -828,20 +845,32 @@
         speed: 2000,
         prevArrow: $('.brand-arrows__left'),
         nextArrow: $('.brand-arrows__right'),
-        responsive: [{
-          breakpoint: 1200,
-          settings: {
-            slidesToShow: 5,
-          },
-          breakpoint: 1000,
-          settings: {
-            slidesToShow: 4,
-          },
-          breakpoint: 750,
-          settings: {
-            slidesToShow: 3,
-          },
-        }]
+        dotsClass: 'brand-dots',
+        responsive: [
+          {
+            breakpoint: 1200,
+            settings: {
+              slidesToShow: 5,
+            }},
+          {
+            breakpoint: 1000,
+            settings: {
+              arrows: false,
+              dots: true,
+              centerMode: true,
+              centerPadding: '30px',
+              slidesToShow: 3,
+          }},
+          {
+            breakpoint: 600,
+            settings: {
+              arrows: false,
+              dots: true,
+              centerMode: true,
+              centerPadding: '0px',
+              slidesToShow: 1,
+          }},
+        ]
       });
 
       // СЛАЙДЕР В БЛОКЕ BEST
