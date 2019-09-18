@@ -419,6 +419,11 @@
                 <img src="img/brand/Layer 36.png" alt="">
               </div>
             </div>
+            <div class="brand-slider__item brand--dekstop">
+                <div class="brand__image">
+                  <img src="img/brand/Vector Smart Object-1.png" alt="">
+                </div>
+              </div>
           </div>
           <!-- /.brand-slider -->
 
@@ -728,6 +733,7 @@
               разрешено только с предварительного согласия правообладателей. Все права на фотографии и тексты
               принадлежат 34play.me.
             </div>
+            <div class="footer__fullver">ПОЛНАЯ ВЕРСИЯ САЙТА</div>
             <div class="footer__creator">Сделано в <span class="footer__creator--bold">REKA Digital Agency</span></div>
             <!-- /.footer__creation -->
             <!-- /.footer-copyright -->
@@ -747,26 +753,26 @@
             </a>
             <span class="footer__schedule">пн-пт, 11:00–18:00</span>
             <a href="mailto:shop@34play.me" class="footer__email">shop@34play.me</a>
+            <ul class="list footer-social">
+                <li class="footer-social__item">
+                  <img src="img/footer/vk.svg" alt="">
+                </li>
+                <li class="footer-social__item">
+                  <img src="img/footer/Fb.svg" alt="">
+                </li>
+                <li class="footer-social__item">
+                  <img src="img/footer/Instagram.svg" alt="">
+                </li>
+                <li class="footer-social__item">
+                  <img src="img/footer/Youtube.svg" alt="">
+                </li>
+    
+              </ul>
+              <!-- /.footer-socials -->
           </div>
-          <!-- /.footer__info -->
-          <ul class="list footer-social">
-            <li class="footer-social__item">
-              <img src="img/footer/vk.svg" alt="">
-            </li>
-            <li class="footer-social__item">
-              <img src="img/footer/Fb.svg" alt="">
-            </li>
-            <li class="footer-social__item">
-              <img src="img/footer/Instagram.svg" alt="">
-            </li>
-            <li class="footer-social__item">
-              <img src="img/footer/Youtube.svg" alt="">
-            </li>
-
-          </ul>
-          <!-- /.footer-socials -->
+          <!-- /.footer-contacts -->
         </div>
-        <!-- /.footer-contacts -->
+        <!-- /.footer-connect -->
       </div>
       <!-- /.footer-wrap -->
     </div>
@@ -840,6 +846,8 @@
 
       // СЛАЙДЕР В БЛОКЕ BRAND
       $('.brand-slider').slick({
+        centerMode: true,
+        centerPadding: '40px',
         slidesToShow: 6,
         slidesToScroll: 1,
         speed: 2000,
@@ -860,6 +868,7 @@
               centerMode: true,
               centerPadding: '30px',
               slidesToShow: 3,
+              focusOnSelect: true,
           }},
           {
             breakpoint: 600,
@@ -869,6 +878,7 @@
               centerMode: true,
               centerPadding: '0px',
               slidesToShow: 1,
+              focusOnSelect: true,
           }},
         ]
       });
@@ -885,12 +895,28 @@
         dots: true,
         prevArrow: $('.best-arrows__left'),
         nextArrow: $('.best-arrows__right'),
-        // responsive: [{
-        //   breakpoint: 768,
-        //   settings: {
-        //     swipe: true
-        //   }
-        // }]
+        responsive: [
+          {
+          breakpoint: 1350,
+          settings: {
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 880,
+          settings: {
+            slidesToShow: 2,
+            arrows: false
+          }
+        },
+        {
+          breakpoint: 500,
+          settings: {
+            slidesToShow: 1,
+            dots: false
+          }
+        }
+      ]
       });
 
       // СЛАЙДЕР В БЛОКЕ FOLLOW

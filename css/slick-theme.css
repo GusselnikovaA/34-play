@@ -305,3 +305,20 @@
         margin-left: -10px;
     }
   }
+
+  @media (max-width: 400px) {
+    .brand-dots li {
+        width: 35px;
+        height: 3px;
+        margin: 0 3px;
+    }
+    .brand-dots li button {
+        width: 35px;
+        height: 3px;
+    }
+    .brand-dots li button:before {
+        width: 35px;
+        height: 3px;
+        margin-left: -10px;
+    }
+  }

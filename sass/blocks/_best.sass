@@ -2,7 +2,6 @@
   background-color: #E8F0F3
   padding-top: 77px
   padding-bottom: 31px
-  display: none
   &-wrap 
     position: relative
   &__title 
@@ -13,8 +12,9 @@
     justify-content: space-between
     padding-bottom: 35px
     outline: none
-    &__item 
+    &__items
       outline: none
+      margin: 0px 10px 
   &-arrows
     position: absolute
     top: 50%
@@ -49,3 +49,18 @@
       font-size: 18px
       line-height: 22px
       letter-spacing: 0.9px
+
+@media (max-width: 880px)
+  .best
+    padding-top: 56px
+    &__title 
+      margin-bottom: 34px
+    &-arrows 
+      display: none
+
+@media (max-width: 500px)
+  .best
+    padding-bottom: 0
+    &-card 
+      max-width: 268px
+  
