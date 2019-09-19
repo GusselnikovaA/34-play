@@ -1,8 +1,7 @@
 .follow 
+  position: relative
   padding-top: 38px
   background-color: #E8F0F3
-  position: relative
-  display: none
   &__title 
     margin-bottom: 14px
   &__link, a 
@@ -12,6 +11,8 @@
     letter-spacing: 0.8px
     color: #131313
     margin-bottom: 33px
+    &--mobile 
+      display: none
   &-arrows 
     position: absolute
     top: 153px
@@ -20,7 +21,14 @@
     display: flex
     justify-content: space-between
     background-color: transparent
-    z-index: 1
+    height: 54%
+    &__left, &__right 
+      padding: 79px 14px
+      background-color:#000000
+      opacity: 0.4
+      img 
+        overflow: hidden
+        object-fit: cover
   &-wrap 
     display: flex
     justify-content: space-between
@@ -31,7 +39,12 @@
     letter-spacing: 1.45px
     text-transform: uppercase
     +reg
+    &--mobile 
+      display: none
   &-form 
+    display: flex
+    align-items: center
+  &-data 
     display: flex
     align-items: center
   &__input 
@@ -58,5 +71,71 @@
     letter-spacing: 1.12px
     border: none
     +bold
+
+@media (max-width: 1350px)
+  .follow 
+    &__subtitle
+      &--dekstop 
+        display: none
+      &--mobile 
+        display: flex
+        margin: auto
+
+@media (max-width: 1000px)
+  .follow 
+    padding-top: 28px
+    &__title 
+      font-size: 26px 
+      margin: 0
+      letter-spacing: 0.5px
+      line-height: 32px
+      margin-bottom: 18px
+    &__subtitle 
+      padding: 14px 0
+      font-size: 12px
+      line-height: 15px
+      +bold
+    &-arrows 
+      top: 110px
+    &-wrap 
+      flex-direction: column
+      justify-content: center
+    &__input 
+      width: 186px
+      border-right: 1px solid #DEDEDE
+    // &__gender 
+    //   width: 133px
+
+@media (max-width: 767px)
+  .follow
+    &-arrows 
+      height: 47%
+      &__left, &__right
+        padding: 40px 14px
+
+@media (max-width: 520px)
+  .follow 
+    &__link 
+      &--dekstop 
+        display: none
+      &--mobile 
+        display: block
+    &-form 
+      flex-direction: column
+    &__button 
+      margin: 16px 0
+    &__gender 
+      width: 133px
+      padding: 13px 9px
+    &__male
+      margin-left: 0px
+
+@media (max-width: 400px)
+  .follow
+    &-arrows
+      &__left, &__right
+        padding: 70px 14px
+
+  
 
 
