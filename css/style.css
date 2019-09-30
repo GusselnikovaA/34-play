@@ -1379,14 +1379,17 @@ input[type='radio']:checked:after {
   .brand-slider__item:last-child {
     display: none;
   }
-  .brand__image {
-    opacity: 0.5;
-  }
   .brand--dekstop {
     display: none;
   }
   .brand-arrows {
     display: none;
+  }
+}
+
+@media (max-width: 414px) {
+  .brand__image {
+    opacity: 0.5;
   }
   .slick-current .brand__image {
     opacity: 1;

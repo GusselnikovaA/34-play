@@ -36,12 +36,15 @@
       &__item 
         &:last-child
           display: none
-    &__image 
-      opacity: 0.5
     &--dekstop 
       display: none
     &-arrows
       display: none
+
+@media (max-width: 414px)
+  .brand
+    &__image 
+      opacity: 0.5 
 
   .slick-current
     .brand__image 
