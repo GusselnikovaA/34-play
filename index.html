@@ -852,12 +852,14 @@
         speed: 2000,
         prevArrow: $('.edge-arrows__left'),
         nextArrow: $('.edge-arrows__right'),
-        responsive: [{
+        responsive: [
+          {
           breakpoint: 850,
           settings: {
             slidesToShow: 1,
           },
-        }]
+        }
+        ]
       });
       // function slickify() {
       //   $('.edge-slider').slick({
@@ -883,8 +885,8 @@
 
       // СЛАЙДЕР В БЛОКЕ BRAND
       $('.brand-slider').slick({
-        centerMode: true,
-        centerPadding: '40px',
+        // centerMode: true,
+        // centerPadding: '40px',
         slidesToShow: 6,
         slidesToScroll: 1,
         speed: 2000,
@@ -902,23 +904,23 @@
             settings: {
               arrows: false,
               dots: true,
-              centerMode: true,
-              centerPadding: '30px',
+              // centerMode: true,
+              // centerPadding: '90px',
               slidesToShow: 3,
-              focusOnSelect: true,
+              // focusOnSelect: true,
             }
           },
           {
             breakpoint: 600,
             settings: {
+              centerMode: true,
+              centerPadding: '70px',
               arrows: false,
               dots: true,
-              centerMode: true,
-              centerPadding: '0px',
-              slidesToShow: 1,
-              focusOnSelect: true,
+              slidesToShow: 1
+              // focusOnSelect: true,
             }
-          },
+          }
         ]
       });
 
