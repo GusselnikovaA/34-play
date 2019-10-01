@@ -6,6 +6,7 @@ var uglify = require('gulp-uglify');
 var rename = require("gulp-rename");
 var concat = require('gulp-concat');
 var useref = require('gulp-useref');
+var svgSprite = require('gulp-svg-sprite');
 
 
 function minifyСss() {
@@ -42,9 +43,23 @@ function moveImages(){
         .pipe(dest('dist/img'));
 }
 
-exports.build = series(minifyСss, moveFonts, moveImages, minifyJS, minifyHtml);
+function moveSvg(){
+  return src('./src/img/**/*.svg')
+        .pipe(svgSprite({
+          mode: {
+            symbol: {
+              sprite: "sprite.svg"
+            }
+          }
+        }))
+        .pipe(dest('dist/img'));
+}
+// Столкнулась с небольшим ступором, как уже в написанном коде поправить все иконки с img на use, не делая все это вручную. Понятно что используется следующая схема <svg width="18" height="18"><use xlink:href='путь к файлу sprite.svg#folder-open'/></svg>
+
+exports.build = series(minifyСss, moveFonts, moveImages, moveSvg, minifyJS, minifyHtml);
 exports.minifyJS = minifyJS;
 exports.minifyHtml = minifyHtml;
 exports.minifyСss = minifyСss;
 exports.moveFonts = moveFonts;
 exports.moveImages = moveImages;
+exports.moveSvg = moveSvg;
