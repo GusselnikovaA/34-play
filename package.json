@@ -19,9 +19,16 @@
   "homepage": "https://github.com/GusselnikovaA/Reka-test#readme",
   "dependencies": {
     "gulp": "^4.0.2",
-    "gulp-htmlmin": "^5.0.1"
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^6.1.0",
+    "gulp-rename": "^1.4.0"
   },
   "devDependencies": {
-    "gulp-clean-css": "^4.2.0"
+    "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-tinypng-compress": "^1.2.5",
+    "gulp-uglify": "^3.0.2",
+    "gulp-uglify-es": "^1.0.4",
+    "gulp-useref": "^3.1.6"
   }
 }

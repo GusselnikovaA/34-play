@@ -1,48 +1,50 @@
-const { parallel, src, dest } = require('gulp');
+const { series, src, dest } = require('gulp');
 let cleanCSS = require('gulp-clean-css');
 const htmlmin = require('gulp-htmlmin');
-// let tinypng = require('gulp-tinypng-compress');
+// var imagemin = require('gulp-imagemin');
+var uglify = require('gulp-uglify');
+var rename = require("gulp-rename");
+var concat = require('gulp-concat');
+var useref = require('gulp-useref');
 
-// function defaultTask(cb) {
-//   console.log('задача выполнена');
-//   cb();
-// }
 
 function minifyСss() {
-  return src('./css/*.css')
+  return src('./src/css/*.css')
         .pipe(cleanCSS({compatibility: 'ie8'}))
+        // .pipe(rename({suffix:'.min'}))
         .pipe(dest('dist/css/'));
 }
 
+function minifyJS() {
+  return src(['./src/js/*.js', '!./src/js/edge.js'])
+        .pipe(uglify())
+        .pipe(concat('main.min.js'))
+        .pipe(dest('dist/js/'));
+}
+
+
 function minifyHtml() {
-  return src('./*.html')
+  return src('./src/*.html')
+        .pipe(useref())
         .pipe(htmlmin({collapseWhitespace: true }))
         .pipe(dest('dist/'));
 }
 
-function moveJS() {
-  return src('./js/*.js')
-        .pipe(dest('dist/js/'));
-}
 
 function moveFonts() {
-  return src('./easy/fonts/**/*')
+  return src('./src/fonts/**/*')
         .pipe(dest('dist/fonts'));
 }
 
-// function tinyImages(cb) {
-//   src('./easy/img/**/*.{png,jpg,jpeg}')
-//     .pipe(tinypng({
-//       key: 'k4X6xYq5WClWF6YgK2qtmnCcGXyBVqyp',
-//     }))
-//     .pipe(dest('dist/img'));
-//     cb();
-// }
+function moveImages(){
+  return src('./src/img/**/*.+(png|jpg|jpeg|svg)')
+        // .pipe(imagemin())
+        .pipe(dest('dist/img'));
+}
 
-exports.build = parallel(minifyСss, minifyHtml, moveJS, moveFonts);
-// exports.default = defaultTask;
+exports.build = series(minifyСss, moveFonts, moveImages, minifyJS, minifyHtml);
+exports.minifyJS = minifyJS;
 exports.minifyHtml = minifyHtml;
 exports.minifyСss = minifyСss;
-exports.moveJS = moveJS;
 exports.moveFonts = moveFonts;
-// exports.tinyImages = tinyImages;
+exports.moveImages = moveImages;
